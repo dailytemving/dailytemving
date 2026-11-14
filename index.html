@@ -1,458 +1,251 @@
 <!doctype html>
 <html lang="ko">
 <head>
+<!-- Google Analytics 4 (dailytemving.github.io/dailytemving) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4EMCZ8EM3J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4EMCZ8EM3J');
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>데일리템빙 키친북 | 7세 워킹맘의 10분 집밥</title>
-<meta name="description" content="7세 워킹맘의 10분 집밥 · 유지어터 냉장고 파먹기. 냉장고에 있는 재료로 오늘 저녁을 고르는 레시피 노트.">
-<meta name="theme-color" content="#FAF9F6">
+<title>데일리템빙 | 오늘 고른 살림·식단 꿀템과 10분 집밥</title>
+<meta name="description" content="7세 아이 키우는 워킹맘의 살림·식단 추천템 20개와 10분 집밥 레시피 4편. 1만원 이하 로켓배송 위주로 매일 다시 고릅니다.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="canonical" href="https://dailytemving.github.io/dailytemving/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="데일리템빙">
+<meta property="og:title" content="데일리템빙 | 오늘 고른 살림·식단 꿀템과 10분 집밥">
+<meta property="og:description" content="살림·리빙, 유지어터 식단, 뷰티·관리, 육아·아이 — 카테고리마다 지금 제일 잘 나가는 5개만. 10분 집밥 레시피 4편도 함께.">
+<meta property="og:url" content="https://dailytemving.github.io/dailytemving/">
+<meta property="og:image" content="https://dailytemving.github.io/dailytemving/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="데일리템빙 | 오늘 고른 살림·식단 꿀템과 10분 집밥">
+<meta name="twitter:description" content="살림·리빙, 유지어터 식단, 뷰티·관리, 육아·아이 — 카테고리마다 지금 제일 잘 나가는 5개만.">
+<meta name="twitter:image" content="https://dailytemving.github.io/dailytemving/og-cover.jpg">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600&amp;display=swap">
 
 <style>
-  /* ─────────────────────────────  TOKENS  ───────────────────────────── */
   :root{
-    --paper:#FAF9F6;
-    --card:#FFFFFF;
-    --ink:#1A1A1A;
-    --body:#3A3733;
-    --muted:#6E6A63;
-    --faint:#9C968C;
-    --line:#E6E2DA;
-    --line-soft:#EDEAE3;
+    --ink:#191919;
+    --sub:#5E5A53;
+    --muted:#8D877D;
+    --line:#E8E4DB;
+    --line2:#F0EDE6;
+    --cream:#FBF8F2;
     --green:#1E4631;
-    --green-tint:#F0F3EF;
-    --sand:#EFEBE3;
-    --serif:'Noto Serif KR','Nanum Myeongjo',Georgia,'Times New Roman',serif;
-    --sans:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+    --green-soft:#EDF2EC;
+    --sale:#B4341F;
   }
-
-  *,*::before,*::after{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
   body{
     margin:0;
-    background:#EFEDE7;
+    background:#F3F0E9;
     color:var(--ink);
-    font-family:var(--sans);
-    font-size:15px;
-    line-height:1.75;
-    letter-spacing:-.01em;
+    font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    letter-spacing:-.012em;
     -webkit-font-smoothing:antialiased;
   }
-  .num{font-variant-numeric:tabular-nums; letter-spacing:0;}
+  .num{font-variant-numeric:tabular-nums;letter-spacing:0}
+  img{max-width:100%}
+  a{color:inherit}
 
-  /* ───────────────────────  MOBILE FRAME  ─────────────────────── */
-  .page{
-    position:relative;
-    max-width:430px;
-    margin:0 auto;
-    background:var(--paper);
-    min-height:100vh;
-    padding-bottom:72px;
-    border-left:1px solid var(--line);
-    border-right:1px solid var(--line);
-  }
-  @media (min-width:900px){
-    body{background:#EAE7E0;}
-    .page{margin:28px auto 40px; min-height:calc(100vh - 68px);}
+  .page{max-width:600px;margin:0 auto;background:#fff;padding-bottom:96px}
+  @media (min-width:680px){
+    .page{margin:28px auto 44px;padding-bottom:88px;border-radius:16px;overflow:hidden}
   }
 
-  /* ─────────────────────────  MASTHEAD  ───────────────────────── */
-  .masthead{padding:32px 22px 0;}
-  .masthead__eyebrow{
-    display:flex; justify-content:space-between; align-items:baseline;
-    font-size:9.5px; letter-spacing:.17em; color:var(--faint); text-transform:uppercase;
-  }
-  .masthead__logo{
-    margin:15px 0 0;
-    font-family:var(--serif);
-    font-size:22px; font-weight:500; letter-spacing:.15em; line-height:1.25;
-    color:var(--ink);
-  }
-  .masthead__logo span{
-    display:block; margin-top:7px;
-    font-family:var(--sans);
-    font-size:9.5px; font-weight:500; letter-spacing:.42em; color:var(--green);
-  }
-  .masthead__rule{height:1px; background:var(--ink); opacity:.9; margin:18px 0 14px;}
-  .masthead__tagline{
-    margin:0; font-size:12.5px; line-height:1.7; color:var(--body); letter-spacing:-.005em;
-  }
-  .masthead__desc{
-    margin:9px 0 0; font-size:11.5px; line-height:1.75; color:var(--muted);
-  }
+  /* ── 상단 ── */
+  .head{padding:26px 20px 22px}
+  .head__meta{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--muted)}
+  .head__meta b{font-weight:600;color:var(--sub)}
+  .logo{margin:12px 0 0;font-size:27px;font-weight:800;letter-spacing:-.045em;line-height:1.2}
+  .logo em{font-style:normal;color:var(--green)}
+  .lede{margin:10px 0 0;font-size:15px;line-height:1.6;color:var(--sub)}
+  .lede b{font-weight:600;color:var(--ink)}
 
-  /* ───────────────────  살림 갓성비 띠배너  ─────────────────── */
-  .strip{padding:22px 0 20px; margin-top:20px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
-  .strip__head{
-    display:flex; align-items:baseline; justify-content:space-between;
-    padding:0 22px 11px;
-  }
-  .strip__title{
-    margin:0; font-size:11px; font-weight:600; letter-spacing:.06em; color:var(--ink);
-  }
-  .strip__title::before{content:""; display:inline-block; width:4px; height:4px; background:var(--green); vertical-align:2px; margin-right:7px;}
-  .strip__note{font-size:10px; color:var(--faint); letter-spacing:-.01em;}
-  .strip__track{
-    display:flex; gap:9px; overflow-x:auto; padding:2px 22px 4px;
-    scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-  }
-  .strip__track::-webkit-scrollbar{display:none;}
+  /* ── 공통 섹션 ── */
+  .sec{padding:26px 20px}
+  .sec + .sec{border-top:1px solid var(--line)}
+  .sec__title{margin:0;font-size:18px;font-weight:700;letter-spacing:-.03em}
+  .sec__sub{margin:6px 0 0;font-size:14px;color:var(--sub)}
+
+  /* ── 오늘의 갓성비 띠배너 ── */
+  .strip{background:var(--cream)}
+  .strip__track{display:flex;gap:10px;overflow-x:auto;margin:14px -20px 0;padding:0 20px 2px;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .strip__track::-webkit-scrollbar{display:none}
   .mini{
-    flex:0 0 auto; width:266px; scroll-snap-align:start;
-    display:flex; align-items:center; gap:11px;
-    background:var(--card); border:1px solid var(--line); border-radius:2px;
-    padding:10px; text-decoration:none; color:inherit;
-    transition:border-color .18s ease;
+    flex:0 0 auto;width:268px;scroll-snap-align:start;
+    display:flex;align-items:center;gap:12px;
+    background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px;
+    text-decoration:none;
   }
-  .mini:hover{border-color:#CFC9BF;}
-  .mini:focus-visible{outline:2px solid var(--green); outline-offset:2px;}
-  .mini__thumb{
-    flex:0 0 auto; width:52px; height:52px; border:1px solid var(--line-soft);
-    background:#fff; display:flex; align-items:center; justify-content:center; overflow:hidden;
-  }
-  .mini__thumb img{width:100%; height:100%; object-fit:contain; display:block; padding:2px;}
-  .mini__body{display:block; min-width:0; flex:1;}
-  .mini__name{
-    display:block; font-size:11.5px; line-height:1.45; color:var(--body);
-    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
-  }
-  .mini__price{display:flex; align-items:baseline; gap:6px; margin-top:4px;}
-  .mini__price b{font-size:13px; font-weight:600; color:var(--ink); letter-spacing:0;}
-  .mini__price em{font-style:normal; font-size:10px; color:var(--green); letter-spacing:.01em;}
-  .mini__go{flex:0 0 auto; font-size:11px; color:var(--faint); padding-left:2px;}
+  .mini__img{flex:0 0 auto;width:58px;height:58px;border-radius:8px;background:#fff;object-fit:contain;padding:3px;border:1px solid var(--line2)}
+  .mini__body{min-width:0}
+  .mini__name{display:block;font-size:14px;line-height:1.45;color:var(--ink);font-weight:500;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .mini__price{display:flex;align-items:baseline;gap:6px;margin-top:5px}
+  .mini__price b{font-size:15px;font-weight:700}
+  .mini__price span{font-size:13px;color:var(--sub)}
 
-  /* ───────────────────  이번 주 냉장고  ─────────────────── */
-  .fridge{padding:20px 22px 22px; border-bottom:1px solid var(--line);}
-  .fridge__label{
-    margin:0; font-size:9.5px; letter-spacing:.17em; color:var(--faint); text-transform:uppercase;
+  /* ── 탭 ── */
+  .tabs{
+    position:sticky;top:0;z-index:30;display:flex;gap:2px;overflow-x:auto;
+    background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:0 10px;scrollbar-width:none;
   }
-  .fridge__title{margin:7px 0 0; font-family:var(--serif); font-size:14px; font-weight:600; letter-spacing:-.01em;}
-  .fridge__list{margin:9px 0 0; font-size:11.5px; line-height:1.9; color:var(--muted); letter-spacing:-.005em;}
-  .fridge__list b{font-weight:500; color:var(--body);}
-  .fridge__note{margin:10px 0 0; font-size:10.5px; color:var(--faint); line-height:1.7;}
-
-  /* ───────────────────  오늘 뭐 먹지  ─────────────────── */
-  .menu{padding:26px 22px 0;}
-  .menu__label{margin:0; font-size:9.5px; letter-spacing:.17em; color:var(--faint); text-transform:uppercase;}
-  .menu__title{margin:8px 0 0; font-family:var(--serif); font-size:21px; font-weight:600; letter-spacing:-.02em;}
-  .menu__desc{margin:8px 0 0; font-size:11.5px; line-height:1.75; color:var(--muted);}
-
-  /* ─────────────────────────  FILTERS  ───────────────────────── */
-  .filters{margin-top:14px;}
-  .filters__tabs{
-    display:flex; gap:0; overflow-x:auto; scrollbar-width:none;
-    position:sticky; top:0; z-index:20;
-    background:rgba(250,249,246,.96);
-    -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  .filters__tabs::-webkit-scrollbar{display:none;}
+  .tabs::-webkit-scrollbar{display:none}
   .tab{
-    flex:0 0 auto; appearance:none; background:none; border:0; font:inherit;
-    padding:13px 13px 11px; font-size:12.5px; color:var(--muted);
-    position:relative; cursor:pointer; letter-spacing:-.01em; white-space:nowrap;
+    appearance:none;border:0;background:none;font:inherit;cursor:pointer;
+    padding:15px 10px 13px;font-size:15px;line-height:1.2;font-weight:500;
+    color:var(--muted);white-space:nowrap;position:relative;
   }
-  .tab:first-child{padding-left:22px;}
-  .tab b{font-weight:400; font-size:9.5px; color:#B5AFA5; margin-left:3px;}
-  .tab[aria-selected="true"]{color:var(--ink); font-weight:600;}
-  .tab[aria-selected="true"] b{color:var(--green);}
-  .tab[aria-selected="true"]::after{
-    content:""; position:absolute; left:13px; right:13px; bottom:-1px; height:1px; background:var(--green);
-  }
-  .tab:first-child[aria-selected="true"]::after{left:22px;}
-  .tab:focus-visible{outline:2px solid var(--green); outline-offset:-4px;}
+  .tab[aria-selected="true"]{color:var(--ink);font-weight:700}
+  .tab[aria-selected="true"]::after{content:"";position:absolute;left:10px;right:10px;bottom:-1px;height:2px;background:var(--ink)}
+  .tab:focus-visible{outline:2px solid var(--green);outline-offset:-3px;border-radius:6px}
 
-  .filters__row{display:flex; align-items:center; gap:6px; flex-wrap:wrap; padding:13px 22px 0;}
-  .filters__row .lbl{
-    font-size:9px; letter-spacing:.15em; color:#B5AFA5; margin-right:2px; min-width:22px;
-  }
-  .pill{
-    appearance:none; font:inherit; cursor:pointer;
-    border:1px solid var(--line); background:transparent; color:var(--muted);
-    border-radius:999px; padding:5px 11px; font-size:11.5px; line-height:1.4;
-    transition:border-color .15s ease, color .15s ease, background .15s ease;
-  }
-  .pill:hover{border-color:#CFC9BF; color:var(--body);}
-  .pill[aria-pressed="true"]{border-color:var(--green); color:var(--green); background:var(--green-tint);}
-  .pill:focus-visible{outline:2px solid var(--green); outline-offset:2px;}
+  /* ── 상품 리스트 ── */
+  .panel{padding:4px 20px 30px}
+  .panel__head{padding:20px 0 4px}
+  .panel__title{margin:0;font-size:19px;font-weight:700;letter-spacing:-.03em}
+  .panel__sub{margin:5px 0 0;font-size:14px;color:var(--sub)}
 
-  .chip{
-    appearance:none; font:inherit; cursor:pointer; text-decoration:none;
-    display:inline-flex; align-items:center; gap:5px;
-    border:1px solid #DCD7CD; background:var(--card); color:var(--body);
-    border-radius:999px; padding:5px 11px; font-size:11.5px; line-height:1.45;
-    transition:border-color .15s ease, color .15s ease, background .15s ease;
-  }
-  .chip:hover{border-color:#C3BCAF; color:var(--ink);}
-  .chip[aria-pressed="true"]{border-color:var(--green); color:var(--green); background:var(--green-tint);}
-  .chip:focus-visible{outline:2px solid var(--green); outline-offset:2px;}
-  .chip i{font-style:normal; color:var(--faint); font-size:9px; line-height:1;}
-  .chip[aria-pressed="true"] i{color:var(--green);}
+  .deal{display:flex;gap:14px;padding:18px 0;border-top:1px solid var(--line2);text-decoration:none}
+  .deal:first-of-type{border-top:0}
+  .deal__img{flex:0 0 auto;width:92px;height:92px;border:1px solid var(--line2);border-radius:10px;background:#fff;object-fit:contain;padding:5px}
+  .deal__body{flex:1;min-width:0;padding-top:2px}
+  .deal__name{display:block;font-size:15px;font-weight:600;line-height:1.45;letter-spacing:-.02em;color:var(--ink);
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .deal__hook{display:block;margin-top:4px;font-size:14px;line-height:1.5;color:var(--sub)}
+  .deal__meta{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:9px}
+  .price{font-size:17px;font-weight:700;color:var(--ink)}
+  .off{font-size:13px;font-weight:700;color:var(--sale)}
+  .badge{font-size:12px;font-weight:600;color:var(--green);background:var(--green-soft);border-radius:5px;padding:2px 7px;line-height:1.5}
+  .badge--mute{color:var(--sub);background:#F4F1EA}
+  .reviews{font-size:13px;color:var(--muted)}
 
-  .filters__result{
-    display:flex; align-items:baseline; justify-content:space-between;
-    padding:16px 22px 4px; font-size:11px; color:var(--faint); letter-spacing:.01em;
-  }
-  .filters__result b{font-weight:500; color:var(--body);}
-  .reset{
-    appearance:none; border:0; background:none; font:inherit; cursor:pointer; padding:0;
-    font-size:11px; color:var(--green);
-    text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px;
-  }
-  .reset[hidden]{display:none;}
+  /* ── 레시피 ── */
+  .recipes{list-style:none;margin:0;padding:0;display:grid;gap:26px}
+  .recipe{display:block;width:100%;text-align:left;padding:0;border:0;background:none;font:inherit;cursor:pointer;color:inherit}
+  .recipe__img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:var(--cream)}
+  .recipe__title{margin:11px 0 0;font-size:17px;font-weight:700;letter-spacing:-.025em;line-height:1.4}
+  .recipe__dek{margin:5px 0 0;font-size:14px;line-height:1.55;color:var(--sub)}
+  .recipe__meta{margin-top:8px;font-size:13px;color:var(--muted)}
+  .recipe:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:6px}
 
-  /* ─────────────────────────  CARDS  ───────────────────────── */
-  .list{
-    list-style:none; margin:0; padding:10px 22px 6px;
-    display:grid; gap:20px;
-  }
-  .list[hidden]{display:none;}
-  .card{
-    appearance:none; font:inherit; text-align:left; cursor:pointer;
-    display:block; width:100%; padding:0;
-    background:var(--card); border:1px solid var(--line); border-radius:2px;
-    color:inherit; overflow:hidden;
-    transition:border-color .18s ease;
-    animation:rise .45s cubic-bezier(.2,.7,.3,1) both;
-  }
-  .card:nth-child(2){animation-delay:.05s;}
-  .card:nth-child(3){animation-delay:.1s;}
-  .card:nth-child(4){animation-delay:.15s;}
-  .card:hover{border-color:#CFC9BF;}
-  .card:focus-visible{outline:2px solid var(--green); outline-offset:2px;}
-  @keyframes rise{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;}}
+  .tip{margin:26px 0 0;padding:16px 18px;border-radius:12px;background:var(--cream);border:1px solid var(--line2)}
+  .tip__title{margin:0;font-size:15px;font-weight:700}
+  .tip__body{margin:6px 0 0;font-size:14px;line-height:1.6;color:var(--sub)}
 
-  .card__media{
-    display:block; position:relative; aspect-ratio:4/3; background:var(--sand); overflow:hidden;
-  }
-  .card__media img{
-    width:100%; height:100%; object-fit:cover; display:block;
-    transition:transform .5s cubic-bezier(.2,.7,.3,1);
-  }
-  .card:hover .card__media img{transform:scale(1.015);}
-  .card__fallback{
-    position:absolute; inset:0; display:none; align-items:center; justify-content:center;
-    padding:24px; text-align:center;
-    font-family:var(--serif); font-size:13px; line-height:1.6; color:#8B857B; letter-spacing:.01em;
-  }
-  .media.is-missing img{display:none;}
-  .media.is-missing .card__fallback{display:flex;}
+  /* ── 푸터 ── */
+  .foot{padding:26px 20px 30px;border-top:1px solid var(--line);background:#fff}
+  .foot__brand{margin:0;font-size:15px;font-weight:700;letter-spacing:-.03em}
+  .foot__line{margin:8px 0 0;font-size:14px;line-height:1.6;color:var(--sub)}
+  .foot__disc{margin:16px 0 0;padding-top:16px;border-top:1px solid var(--line2);font-size:13px;line-height:1.6;color:var(--muted)}
 
-  .card__body{display:block; padding:16px 16px 17px;}
-  .card__kicker{
-    display:flex; align-items:center; gap:7px;
-    font-size:9.5px; letter-spacing:.13em; color:var(--faint); text-transform:uppercase;
-  }
-  .card__no{color:var(--green); font-family:var(--serif); font-size:10.5px; letter-spacing:.04em;}
-  .card__kicker .sep{color:#D6D0C6;}
-  .card__title{
-    display:block; margin:9px 0 0;
-    font-family:var(--serif); font-size:17px; font-weight:600; line-height:1.45; letter-spacing:-.015em;
-  }
-  .card__dek{display:block; margin-top:7px; font-size:12px; line-height:1.7; color:var(--muted);}
-  .card__foot{
-    display:flex; align-items:center; justify-content:space-between;
-    margin-top:13px; padding-top:11px; border-top:1px solid var(--line-soft);
-  }
-  .card__tags{display:block; font-size:10.5px; color:#8B857B; letter-spacing:.01em;}
-  .card__open{font-size:10.5px; color:var(--green); letter-spacing:.02em; white-space:nowrap;}
-
-  /* ─────────────────────────  EMPTY  ───────────────────────── */
-  .empty{padding:52px 22px 60px; text-align:center;}
-  .empty[hidden]{display:none;}
-  .empty__title{margin:0; font-family:var(--serif); font-size:15px; font-weight:600;}
-  .empty__desc{margin:9px 0 0; font-size:11.5px; line-height:1.75; color:var(--muted);}
-  .empty__reset{
-    appearance:none; font:inherit; cursor:pointer; margin-top:20px;
-    background:none; border:1px solid var(--green); color:var(--green);
-    border-radius:999px; padding:7px 16px; font-size:11.5px;
-  }
-
-  /* ─────────────────────────  FOOTER  ───────────────────────── */
-  .foot{
-    margin-top:34px; padding:24px 22px 28px;
+  /* 고정 공정위 문구 */
+  .disc-bar{
+    position:fixed;left:50%;transform:translateX(-50%);bottom:0;z-index:40;
+    width:100%;max-width:600px;
+    padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px));
+    background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
     border-top:1px solid var(--line);
-    text-align:center;
-  }
-  .foot__brand{font-family:var(--serif); font-size:11px; letter-spacing:.24em; color:var(--muted); margin:0;}
-  .foot__line{font-size:10.5px; color:var(--faint); margin:10px 0 0; line-height:1.7;}
-  .foot__copy{font-size:9.5px; letter-spacing:.12em; color:#C0BAAF; margin:14px 0 0; text-transform:uppercase;}
-
-  /* fixed 공정위 문구 */
-  .disc{
-    position:fixed; left:50%; transform:translateX(-50%); bottom:0; z-index:30;
-    width:min(100%,430px);
-    padding:9px 22px calc(9px + env(safe-area-inset-bottom,0px));
-    background:rgba(250,249,246,.97);
-    -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
-    border-top:1px solid var(--line);
-    font-size:9.5px; line-height:1.5; color:#8B857B; letter-spacing:-.01em; text-align:center;
+    font-size:13px;line-height:1.5;color:var(--muted);text-align:center;
   }
 
-  /* ─────────────────────────  SHEET  ───────────────────────── */
-  .sheet{position:fixed; inset:0; z-index:60;}
-  .sheet[aria-hidden="true"]{pointer-events:none;}
-  .sheet__scrim{
-    position:absolute; inset:0; background:rgba(26,26,26,.34);
-    opacity:0; transition:opacity .28s ease;
-  }
-  .sheet[aria-hidden="false"] .sheet__scrim{opacity:1;}
-  .sheet[aria-hidden="true"] .sheet__scrim{visibility:hidden; transition:opacity .28s ease, visibility 0s .28s;}
+  /* ── 상세 시트 ── */
+  .sheet{position:fixed;inset:0;z-index:60}
+  .sheet[aria-hidden="true"]{pointer-events:none}
+  .sheet__scrim{position:absolute;inset:0;background:rgba(20,20,20,.38);opacity:0;transition:opacity .26s ease}
+  .sheet[aria-hidden="false"] .sheet__scrim{opacity:1}
+  .sheet[aria-hidden="true"] .sheet__scrim{visibility:hidden;transition:opacity .26s ease,visibility 0s .26s}
   .sheet__panel{
-    position:absolute; left:50%; bottom:0;
-    transform:translateX(-50%) translateY(100%);
-    width:min(100%,430px); max-height:92vh; max-height:92dvh;
-    background:var(--paper);
-    border-top:1px solid var(--line); border-radius:3px 3px 0 0;
-    display:flex; flex-direction:column;
-    transition:transform .32s cubic-bezier(.22,.8,.3,1);
+    position:absolute;left:50%;bottom:0;transform:translateX(-50%) translateY(100%);
+    width:100%;max-width:600px;max-height:92vh;max-height:92dvh;
+    background:#fff;border-radius:16px 16px 0 0;
+    display:flex;flex-direction:column;
+    transition:transform .3s cubic-bezier(.22,.8,.3,1);
   }
-  .sheet[aria-hidden="false"] .sheet__panel{transform:translateX(-50%) translateY(0);}
-  .sheet[aria-hidden="true"] .sheet__panel{visibility:hidden; transition:transform .32s cubic-bezier(.22,.8,.3,1), visibility 0s .32s;}
-  .sheet__scroll{overflow-y:auto; -webkit-overflow-scrolling:touch; padding-bottom:30px;}
+  .sheet[aria-hidden="false"] .sheet__panel{transform:translateX(-50%) translateY(0)}
+  .sheet[aria-hidden="true"] .sheet__panel{visibility:hidden;transition:transform .3s cubic-bezier(.22,.8,.3,1),visibility 0s .3s}
+  .sheet__scroll{overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:36px}
   .sheet__bar{
-    position:sticky; top:0; z-index:3;
-    display:flex; align-items:center; justify-content:space-between;
-    padding:11px 22px;
-    background:rgba(250,249,246,.97);
-    -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;
+    padding:12px 20px;background:rgba(255,255,255,.97);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
   }
-  .sheet__bar span{font-size:9px; letter-spacing:.2em; color:var(--faint); text-transform:uppercase;}
-  .sheet__close{
-    appearance:none; border:0; background:none; font:inherit; cursor:pointer; padding:2px 0;
-    font-size:11px; color:var(--muted); letter-spacing:.02em;
-  }
-  .sheet__close:focus-visible{outline:2px solid var(--green); outline-offset:3px;}
+  .sheet__bar span{font-size:14px;color:var(--muted)}
+  .sheet__close{appearance:none;border:0;background:none;font:inherit;cursor:pointer;padding:4px 2px;font-size:15px;color:var(--ink);font-weight:600}
+  .sheet__close:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
 
-  .sheet__cover{position:relative; aspect-ratio:4/3; background:var(--sand); overflow:hidden;}
-  .sheet__cover img{width:100%; height:100%; object-fit:cover; display:block;}
-  .sheet__cover .card__fallback{display:none; align-items:center; justify-content:center; text-align:center; padding:26px;}
+  .sheet__cover{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--cream)}
+  .sheet__body{padding:22px 20px 0}
+  .sheet__kicker{margin:0;font-size:14px;color:var(--muted)}
+  .sheet__title{margin:8px 0 0;font-size:23px;font-weight:800;line-height:1.35;letter-spacing:-.035em}
+  .sheet__dek{margin:8px 0 0;font-size:15px;line-height:1.6;color:var(--sub)}
 
-  .sheet__content{padding:20px 22px 0;}
-  .sheet__kicker{
-    display:flex; flex-wrap:wrap; align-items:center; gap:7px;
-    font-size:9.5px; letter-spacing:.13em; color:var(--faint); text-transform:uppercase;
-  }
-  .sheet__title{
-    margin:10px 0 0; font-family:var(--serif); font-size:22px; font-weight:600; line-height:1.4; letter-spacing:-.02em;
-  }
-  .sheet__dek{margin:9px 0 0; font-size:12.5px; line-height:1.75; color:var(--muted);}
+  .facts{list-style:none;display:flex;margin:20px 0 0;padding:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .facts li{flex:1;padding:12px 0 11px;text-align:center;border-left:1px solid var(--line2)}
+  .facts li:first-child{border-left:0}
+  .facts span{display:block;font-size:13px;color:var(--muted)}
+  .facts b{display:block;margin-top:3px;font-size:15px;font-weight:600}
 
-  .meta{
-    list-style:none; display:flex; margin:20px 0 0; padding:0;
-    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-  }
-  .meta li{
-    flex:1; padding:11px 0 10px; text-align:center;
-    border-left:1px solid var(--line-soft);
-  }
-  .meta li:first-child{border-left:0;}
-  .meta span{display:block; font-size:9px; letter-spacing:.14em; color:var(--faint); text-transform:uppercase;}
-  .meta b{display:block; margin-top:4px; font-size:12.5px; font-weight:500; color:var(--body);}
+  .block{margin-top:26px}
+  .block__head{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .block__title{margin:0;font-size:16px;font-weight:700;letter-spacing:-.02em}
+  .block__count{margin:0;font-size:14px;color:var(--sub)}
+  .block__count b{color:var(--green);font-weight:700}
 
-  .sec{margin-top:28px;}
-  .sec__label{margin:0 0 5px; font-size:9px; letter-spacing:.19em; color:#B5AFA5; text-transform:uppercase;}
-  .sec__head{display:flex; align-items:baseline; justify-content:space-between; gap:10px;}
-  .sec__title{margin:0 0 10px; font-family:var(--serif); font-size:15px; font-weight:600; letter-spacing:-.01em;}
-  .sec__head .sec__title{margin-bottom:0;}
-  .sec__progress{margin:0 0 0; font-size:10.5px; color:var(--faint); font-variant-numeric:tabular-nums;}
-  .sec__progress b{font-weight:600; color:var(--green);}
+  .ing-list{list-style:none;margin:10px 0 0;padding:0}
+  .ing{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line2);padding:1px 0}
+  .ing:first-child{border-top:1px solid var(--line2)}
+  .ing__label{position:relative;flex:1;min-width:0;display:flex;align-items:flex-start;gap:12px;padding:13px 0;cursor:pointer}
+  .ing__label input{position:absolute;width:1px;height:1px;opacity:0;margin:0}
+  .ing__box{flex:0 0 auto;width:18px;height:18px;margin-top:2px;border:1.5px solid #CFC9BE;border-radius:4px;background:#fff;position:relative;transition:background .15s ease,border-color .15s ease}
+  .ing__label input:checked ~ .ing__box{background:var(--green);border-color:var(--green)}
+  .ing__label input:checked ~ .ing__box::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;border:2px solid #fff;border-top:0;border-left:0;transform:rotate(40deg)}
+  .ing__name{font-size:15px;line-height:1.5;color:var(--ink);transition:color .15s ease}
+  .ing__label input:checked ~ .ing__name{color:#B4AEA3;text-decoration:line-through}
+  .ing__label input:focus-visible ~ .ing__box{outline:2px solid var(--green);outline-offset:3px}
+  .ing__buy{flex:0 0 auto;font-size:13px;color:var(--green);text-decoration:none;padding:4px 0;border-bottom:1px solid rgba(30,70,49,.3);white-space:nowrap}
 
-  /* 재료 체크리스트 */
-  .ing-list{list-style:none; margin:12px 0 0; padding:0;}
-  .ing{
-    display:flex; align-items:center; gap:10px;
-    border-bottom:1px solid var(--line-soft); padding:2px 0;
-  }
-  .ing:first-child{border-top:1px solid var(--line-soft);}
-  .ing__label{
-    position:relative; flex:1; min-width:0;
-    display:flex; align-items:flex-start; gap:11px;
-    padding:12px 0; cursor:pointer;
-  }
-  .ing__label input{position:absolute; width:1px; height:1px; opacity:0; margin:0;}
-  .ing__box{
-    flex:0 0 auto; width:15px; height:15px; margin-top:4px;
-    border:1px solid #CFC9BF; background:#fff; position:relative;
-    transition:background .15s ease, border-color .15s ease;
-  }
-  .ing__label input:checked ~ .ing__box{background:var(--green); border-color:var(--green);}
-  .ing__label input:checked ~ .ing__box::after{
-    content:""; position:absolute; left:4.5px; top:1.5px; width:4px; height:8px;
-    border:1px solid #fff; border-top:0; border-left:0; transform:rotate(40deg);
-  }
-  .ing__name{
-    font-size:12.5px; line-height:1.6; color:var(--body);
-    transition:color .15s ease;
-  }
-  .ing__label input:checked ~ .ing__name{
-    color:#AEA89E; text-decoration:line-through; text-decoration-thickness:1px;
-  }
-  .ing__label input:focus-visible ~ .ing__box{outline:2px solid var(--green); outline-offset:3px;}
-  .ing__buy{
-    flex:0 0 auto; font-size:10px; color:var(--faint); text-decoration:none;
-    letter-spacing:.01em; padding:3px 0; border-bottom:1px solid transparent;
-    transition:color .15s ease, border-color .15s ease; white-space:nowrap;
-  }
-  .ing__buy:hover{color:var(--green); border-bottom-color:var(--green);}
+  .steps{list-style:none;margin:10px 0 0;padding:0}
+  .steps li{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line2)}
+  .steps li:last-child{border-bottom:0;padding-bottom:2px}
+  .steps__n{flex:0 0 auto;min-width:20px;padding-top:1px;font-size:14px;font-weight:700;color:var(--green)}
+  .steps p{margin:0;font-size:15px;line-height:1.7;color:var(--ink)}
 
-  /* 조리 순서 */
-  .steps{list-style:none; margin:0; padding:0;}
-  .steps li{display:flex; gap:13px; padding:13px 0; border-bottom:1px solid var(--line-soft);}
-  .steps li:last-child{border-bottom:0; padding-bottom:2px;}
-  .steps__n{
-    flex:0 0 auto; font-family:var(--serif); font-size:10.5px; color:var(--green);
-    letter-spacing:.04em; padding-top:3px; min-width:18px;
-  }
-  .steps p{margin:0; font-size:12.5px; line-height:1.85; color:var(--body);}
+  .note{margin:24px 0 0;padding:16px 18px;border-radius:12px;background:var(--cream);border:1px solid var(--line2)}
+  .note__label{margin:0;font-size:13px;font-weight:700;color:var(--green)}
+  .note p{margin:6px 0 0;font-size:14px;line-height:1.7;color:var(--sub)}
 
-  /* 에디터 노트 */
-  .note{
-    margin:28px 0 0; padding:2px 0 2px 14px;
-    border-left:1px solid var(--green);
-  }
-  .note__label{
-    margin:0; font-size:9px; letter-spacing:.19em; color:var(--green); text-transform:uppercase;
-  }
-  .note p{
-    margin:7px 0 0; font-family:var(--serif); font-size:12.5px; line-height:1.9; color:#4A463F;
-    letter-spacing:-.005em;
-  }
+  .saver{margin-top:22px;padding:16px 18px;border:1px solid var(--line);border-radius:12px}
+  .saver__label{display:block;font-size:13px;color:var(--muted)}
+  .saver__name{display:block;margin:5px 0 0;font-size:15px;font-weight:700}
+  .saver__desc{display:block;margin:4px 0 0;font-size:14px;line-height:1.6;color:var(--sub)}
+  .saver__link{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;color:var(--green);text-decoration:none;border-bottom:1px solid rgba(30,70,49,.35)}
 
-  /* 시간 아껴준 것 */
-  .saver{
-    margin-top:26px; padding:14px 15px 15px;
-    border:1px solid var(--line); background:var(--card); border-radius:2px;
-  }
-  .saver__label{
-    display:block; font-size:9px; letter-spacing:.17em; color:var(--green); text-transform:uppercase;
-  }
-  .saver__name{display:block; margin:8px 0 0; font-size:13px; font-weight:600; color:var(--ink);}
-  .saver__desc{display:block; margin:5px 0 0; font-size:11.5px; line-height:1.75; color:var(--muted);}
-  .saver__link{
-    display:inline-block; margin-top:10px; padding-bottom:1px;
-    font-size:10.5px; color:var(--green); text-decoration:none;
-    border-bottom:1px solid rgba(30,70,49,.35); letter-spacing:.02em;
-  }
-  .saver__link:hover{border-bottom-color:var(--green);}
+  .picks{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0}
+  .pick{display:inline-flex;align-items:center;gap:4px;padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;color:var(--ink);text-decoration:none}
+  .pick span{color:var(--green)}
 
-  /* 추천 재료 · 주방템 */
-  .picks{list-style:none; display:flex; flex-wrap:wrap; gap:7px; margin:13px 0 0; padding:0;}
-
-  .sheet__disc{
-    margin:30px 0 0; padding:16px 0 4px; border-top:1px solid var(--line);
-    font-size:9.5px; line-height:1.6; color:#8B857B;
-  }
+  .sheet__disc{margin:26px 0 0;padding-top:18px;border-top:1px solid var(--line2);font-size:13px;line-height:1.6;color:var(--muted)}
 
   @media (prefers-reduced-motion:reduce){
-    *{animation-duration:.001ms !important; animation-delay:0ms !important; transition-duration:.001ms !important;}
+    *{animation-duration:.001ms !important;animation-delay:0ms !important;transition-duration:.001ms !important}
   }
 </style>
 </head>
@@ -460,123 +253,67 @@
 <body>
 <div class="page">
 
-  <!-- ─────────────  MASTHEAD  ───────────── -->
-  <header class="masthead">
-    <div class="masthead__eyebrow">
-      <span>Vol. 04 · 2026. 11. 14</span>
-      <span>Recipe 4</span>
+  <header class="head">
+    <div class="head__meta">
+      <span class="num">2026. 11. 15</span>
+      <span>추천템 <b class="num">20</b> · 레시피 <b class="num">4</b></span>
     </div>
-    <h1 class="masthead__logo">DAILYTEMVING<span>KITCHEN</span></h1>
-    <div class="masthead__rule" role="presentation"></div>
-    <p class="masthead__tagline">7세 워킹맘의 10분 집밥 · 유지어터 냉장고 파먹기</p>
-    <p class="masthead__desc">일 끝나고 냉장고만 열어도 저녁이 되는 날을 위해, 장 보는 날과 안 보는 날 모두 쓸 수 있는 레시피만 모았습니다.</p>
+    <h1 class="logo">데일리<em>템빙</em></h1>
+    <p class="lede">7세 아이 키우는 워킹맘의 <b>살림 · 식단 · 10분 집밥</b>.<br>카테고리마다 지금 제일 잘 나가는 5개만 골라 두었습니다.</p>
   </header>
 
-  <!-- ─────────────  오늘의 살림 갓성비 (띠배너)  ───────────── -->
-  <section class="strip" aria-label="오늘의 살림 갓성비">
-    <div class="strip__head">
-      <h2 class="strip__title">오늘의 살림 갓성비</h2>
-      <span class="strip__note">레시피 보다가 같이 담는</span>
-    </div>
+  <!-- 오늘의 살림 갓성비 -->
+  <section class="sec strip" aria-label="오늘의 살림 갓성비">
+    <h2 class="sec__title">오늘의 살림 갓성비</h2>
+    <p class="sec__sub">레시피 보다가 같이 담는 두 개</p>
 
     <div class="strip__track">
-      <!-- 쿠팡 파트너스 링크 (dailytemving) -->
-      <a class="mini" href="https://link.coupang.com/a/iFujx12Fky" target="_blank" rel="nofollow sponsored noopener">
-        <span class="mini__thumb"><img src="downloads/cocoz_official_1_thumb.jpg" alt="코코즈 오븐크리너 골드 500ml" loading="lazy"></span>
+      <a class="mini" href="https://link.coupang.com/a/iFujx12Fky" target="_blank" rel="nofollow sponsored noopener"
+         data-item="코코즈 오븐크리너 골드 500ml" data-cat="살림·리빙" data-price="6430">
+        <img class="mini__img" src="img/banner_cocoz.jpg" alt="코코즈 오븐크리너 골드 500ml" loading="lazy" decoding="async">
         <span class="mini__body">
           <span class="mini__name">코코즈 오븐크리너 골드 500ml</span>
-          <span class="mini__price"><b class="num">6,430원</b><em>와우 10%↓</em></span>
+          <span class="mini__price"><b class="num">6,430원</b><span>와우 10% 할인</span></span>
         </span>
-        <span class="mini__go" aria-hidden="true">→</span>
       </a>
-
-      <a class="mini" href="https://link.coupang.com/a/iB9ZBYPPNY" target="_blank" rel="nofollow sponsored noopener">
-        <span class="mini__thumb"><img src="downloads/kleenex_kitchen_towel_thumb.jpg" alt="크리넥스 안심 3겹 뽑아쓰는 키친타월 140매 4개" loading="lazy"></span>
+      <a class="mini" href="https://link.coupang.com/a/iB9ZBYPPNY" target="_blank" rel="nofollow sponsored noopener"
+         data-item="크리넥스 안심 3겹 뽑아쓰는 키친타월 140매 4개" data-cat="살림·리빙">
+        <img class="mini__img" src="img/banner_kleenex.jpg" alt="크리넥스 안심 3겹 뽑아쓰는 키친타월 140매 4개" loading="lazy" decoding="async">
         <span class="mini__body">
           <span class="mini__name">크리넥스 안심 3겹 뽑아쓰는 키친타월 140매×4개</span>
-          <span class="mini__price"><b class="num">59%</b><em>할인 · 로켓배송</em></span>
+          <span class="mini__price"><b class="num">59%</b><span>할인 · 로켓배송</span></span>
         </span>
-        <span class="mini__go" aria-hidden="true">→</span>
       </a>
     </div>
   </section>
 
-  <!-- ─────────────  이번 주 우리 집 냉장고  ───────────── -->
-  <section class="fridge" aria-label="이번 주 우리 집 냉장고">
-    <p class="fridge__label">In my fridge</p>
-    <h2 class="fridge__title">이번 주 우리 집 냉장고</h2>
-    <p class="fridge__list">
-      한촌 설렁탕 육수 · <b>닭윙(아랫날개)</b> · 냉동 붉은새우 · 오징어 · 두툼한 베이컨 · <b>계란</b> · 우유 · 모짜렐라 슈레드 치즈 · 양파 · 당근 · 대파 · 레몬
-    </p>
-    <p class="fridge__note">여기 있는 재료로 바로 되는 것부터. 없는 재료는 레시피 안에서 한 번에 담을 수 있어요.</p>
-  </section>
-
-  <!-- ─────────────  오늘 뭐 먹지 + 필터  ───────────── -->
-  <section class="menu">
-    <p class="menu__label">Today's table</p>
-    <h2 class="menu__title">오늘 뭐 먹지</h2>
-    <p class="menu__desc">가지고 있는 재료만 눌러 보세요. 3초면 오늘 저녁이 정해집니다.</p>
-  </section>
-
-  <div class="filters" id="filters">
-    <div class="filters__tabs" role="tablist" aria-label="레시피 카테고리">
-      <button class="tab" role="tab" data-cat="all" aria-selected="true">전체<b data-count="all">4</b></button>
-      <button class="tab" role="tab" data-cat="diet" aria-selected="false">유지어터<b data-count="diet">3</b></button>
-      <button class="tab" role="tab" data-cat="kids" aria-selected="false">아이 반찬<b data-count="kids">4</b></button>
-      <button class="tab" role="tab" data-cat="fridge" aria-selected="false">냉장고 파먹기<b data-count="fridge">3</b></button>
-    </div>
-
-    <div class="filters__row">
-      <span class="lbl">TIME</span>
-      <button class="pill" data-time="all" aria-pressed="true">전체</button>
-      <button class="pill" data-time="5" aria-pressed="false">5분 컷</button>
-      <button class="pill" data-time="10" aria-pressed="false">10분 컷</button>
-    </div>
-
-    <div class="filters__row filters__row--chips">
-      <span class="lbl">재료</span>
-      <button class="chip" data-tag="계란" aria-pressed="false">#계란</button>
-      <button class="chip" data-tag="양배추" aria-pressed="false">#양배추</button>
-      <button class="chip" data-tag="두부" aria-pressed="false">#두부</button>
-      <button class="chip" data-tag="참치" aria-pressed="false">#참치</button>
-      <button class="chip" data-tag="치즈" aria-pressed="false">#치즈</button>
-      <button class="chip" data-tag="닭윙" aria-pressed="false">#닭윙</button>
-      <button class="chip" data-tag="설렁탕육수" aria-pressed="false">#설렁탕육수</button>
-    </div>
-
-    <div class="filters__result">
-      <span id="resultText"><b>4편</b>의 레시피</span>
-      <button class="reset" id="resetBtn" hidden>필터 초기화</button>
-    </div>
+  <!-- 탭 -->
+  <div class="tabs" role="tablist" aria-label="카테고리">
+    <button class="tab" role="tab" data-tab="living" aria-selected="true" aria-controls="panel">살림·리빙</button>
+    <button class="tab" role="tab" data-tab="diet" aria-selected="false" aria-controls="panel">유지어터·식단</button>
+    <button class="tab" role="tab" data-tab="beauty" aria-selected="false" aria-controls="panel">뷰티·관리</button>
+    <button class="tab" role="tab" data-tab="kids" aria-selected="false" aria-controls="panel">육아·아이</button>
+    <button class="tab" role="tab" data-tab="recipe" aria-selected="false" aria-controls="panel">10분 레시피</button>
   </div>
 
-  <main>
-    <ul class="list" id="list" aria-label="레시피 목록"></ul>
-
-    <div class="empty" id="empty" hidden>
-      <p class="empty__title">이 조합으론 아직 레시피가 없어요</p>
-      <p class="empty__desc">재료를 하나만 골라 보시거나, 조리시간 조건을 풀어 보세요.<br>조건을 조금 넓히면 오늘 저녁이 다시 보입니다.</p>
-      <button class="empty__reset" id="emptyReset">필터 초기화</button>
-    </div>
-  </main>
+  <main class="panel" id="panel" role="tabpanel" aria-live="polite"></main>
 
   <footer class="foot">
-    <p class="foot__brand">DAILYTEMVING KITCHEN</p>
-    <p class="foot__line">매주 목요일, 냉장고 사정에 맞춘 레시피 몇 편을 올립니다.<br>급할 땐 재료 칩부터 눌러 주세요.</p>
-    <p class="foot__copy">© 2026 dailytemving</p>
+    <p class="foot__brand">데일리템빙</p>
+    <p class="foot__line">살림·식단 추천템은 매일 다시 고르고, 레시피는 매주 목요일에 몇 편씩 올립니다.<br>가격은 확인한 시점 기준이라 판매처 사정에 따라 달라질 수 있어요.</p>
+    <p class="foot__disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
   </footer>
 </div>
 
-<!-- 고정 공정위 문구 -->
-<div class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+<div class="disc-bar">쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
 
-<!-- ─────────────  상세 바텀시트  ───────────── -->
+<!-- 상세 시트 -->
 <div class="sheet" id="sheet" aria-hidden="true">
   <div class="sheet__scrim" data-close></div>
   <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
     <div class="sheet__scroll" id="sheetScroll">
       <div class="sheet__bar">
-        <span id="sheetBarLabel">Recipe</span>
+        <span id="sheetBarLabel">레시피</span>
         <button class="sheet__close" data-close>닫기</button>
       </div>
       <div id="sheetBody"></div>
@@ -585,20 +322,17 @@
 </div>
 
 <noscript>
-  <p style="padding:16px 22px; font-size:12px; color:#6E6A63;">필터와 재료 체크는 자바스크립트로 동작합니다.</p>
+  <p style="padding:18px 20px;font-size:14px;color:#5E5A53">재료 체크와 탭 이동은 자바스크립트로 동작합니다.</p>
 </noscript>
 
 <script>
-/* =========================================================================
-   데일리템빙 키친북 v1 — 레시피 데이터 + 인터랙션
-   -------------------------------------------------------------------------
-   쿠파스 링크 교체 지점:
-   위 PRODUCT_LINKS 에 partners.coupang.com '간편 링크 만들기'(채널 dailytemving)
-   로 만든 단축 URL 을 넣으면, 재료·주방템 링크가 곧바로 수수료 링크가 됩니다.
-   양배추·계란·버터 등 집에 늘 있는 기본 재료는 buy 키를 두지 않아 링크가 달리지 않습니다.
-   ========================================================================= */
-const PRODUCT_LINKS = {
-  /* 쿠팡 파트너스 '간편 링크/상품 링크' (채널: dailytemving) 단축 URL */
+/* =====================================================================
+   데일리템빙 v2 — 추천템 TOP 5 · 10분 레시피 · GA4 (tab_view / coupang_click)
+   쿠파스 링크: 파트너스 '간편 링크' 채널 dailytemving
+   ===================================================================== */
+
+/* 레시피용 쿠파스 단축 링크 (채널 dailytemving) */
+const CHEAT = {
   '부침가루':              'https://link.coupang.com/a/iFO7gAGhvU',
   '쯔유':                  'https://link.coupang.com/a/iFO5oqLHi0',
   '저당 알룰로스':         'https://link.coupang.com/a/iFO6qV8oMe',
@@ -614,24 +348,114 @@ const PRODUCT_LINKS = {
   '에어프라이어 종이호일': 'https://link.coupang.com/a/iFPol035K8'
 };
 
-function buyUrl(query){
-  const direct = PRODUCT_LINKS[query];
-  if (direct) return direct;
-  return 'https://www.coupang.com/np/search?q=' + encodeURIComponent(query);
-}
+/* ── 추천템: 카테고리당 TOP 5 ── */
+const TABS = {
+  living: { label:'살림·리빙', sub:'욕실·주방·수납, 오늘 바로 체감되는 것만' },
+  diet:   { label:'유지어터·식단', sub:'1만원 이하 로켓배송, 냉장고에 하나씩' },
+  beauty: { label:'뷰티·관리', sub:'한 번 사면 오래 쓰는 것들' },
+  kids:   { label:'육아·아이', sub:'6~9세 아이 키우며 다시 사는 것들' },
+  recipe: { label:'10분 레시피', sub:'냉장고에 있는 재료로 오늘 저녁 정하기' }
+};
 
-const CAT_LABEL = { diet:'유지어터', kids:'아이 반찬', fridge:'냉장고 파먹기' };
+const PRODUCTS = {
+  living: [
+    { name:'홈스타 맥스프레쉬 뿌리는 곰팡이 싹 세정제, 500ml',
+      hook:'3천원대로 욕실 곰팡이, 뿌려두고 씻어내면 끝',
+      price:3230, reviews:65595, rocket:true,
+      img:'img/living_mold.jpg', url:'https://link.coupang.com/a/iFYi3xIGqG' },
+    { name:'홈스타 핑크파워 욕실 찌든때 클리너, 750ml',
+      hook:'물때 낀 바닥·타일에 뿌리고 밀면 끝',
+      price:6250, reviews:22542, rocket:true,
+      img:'img/living_pinkpower.jpg', url:'https://link.coupang.com/a/iFX96ZEhYi' },
+    { name:'펑크린 울트라겔 배수관 세정제, 500ml, 2개',
+      hook:'막힌 배수구에 붓고 8시간, 뜨거운 물 한 번이면',
+      price:9650, reviews:20075, rocket:true,
+      img:'img/living_drain.jpg', url:'https://link.coupang.com/a/iFXG7tJAwm' },
+    { name:'몬스터겔 초강력 무타공 후크 5p, 투명',
+      hook:'못 없이 5kg, 벽지 안 뜯기는 후크',
+      price:8050, reviews:13285, rocket:true,
+      img:'img/living_hook.jpg', url:'https://link.coupang.com/a/iFYglMKhFc' },
+    { name:'코멧 홈 길이조절 접시 정리대, 화이트',
+      hook:'접시 세워두면 식기장이 두 배로',
+      price:5790, reviews:11360, rocket:true,
+      img:'img/living_plate.jpg', url:'https://link.coupang.com/a/iFYdb9CDmu' }
+  ],
+  diet: [
+    { name:'매일바이오 그릭요거트 무가당 플레인, 800g',
+      hook:'후기 22만, 무가당 그릭 한 통으로 아침 해결',
+      price:7880, reviews:227637, rocket:true,
+      img:'img/diet_greek.jpg', url:'https://link.coupang.com/a/iFYsZFuu60' },
+    { name:'티젠 콤부차 레몬, 5g, 30개입',
+      hook:'탄산 대신 콤부차, 하루 한 잔 습관',
+      price:9810, reviews:114725, rocket:true,
+      img:'img/diet_kombucha.jpg', url:'https://link.coupang.com/a/iFYuA3fptI' },
+    { name:'다하다 호박팥차, 1.5g, 40개입',
+      hook:'붓기 빼는 호박팥차, 회사에서도 한 잔',
+      price:5900, reviews:41325, rocket:true,
+      img:'img/diet_pumpkin.jpg', url:'https://link.coupang.com/a/iFYubffrSm' },
+    { name:'자연다움 바로먹는 퀵 오트밀, 1kg',
+      hook:'1kg 5,980원, 아침 준비 1분',
+      price:5980, reviews:34396, rocket:true,
+      img:'img/diet_oat.jpg', url:'https://link.coupang.com/a/iFYrqmDiKq' },
+    { name:'비비드키친 저당 치폴레소스, 265g',
+      hook:'닭가슴살 샐러드에 한 스푼, 저당인데 매콤',
+      price:4040, reviews:15529, rocket:true,
+      img:'img/diet_chipotle.jpg', url:'https://link.coupang.com/a/iFYmhz6cHA' }
+  ],
+  beauty: [
+    { name:'일리윤 세라마이드 아토 집중크림, 230ml',
+      hook:'후기 2.8만 로켓배송, 건조한 손·얼굴에 한 번에',
+      price:14140, was:22900, reviews:28907, rocket:true,
+      img:'img/beauty_illiyoon.png', url:'https://link.coupang.com/a/iFUOV6mbgO' },
+    { name:'이데셀크림 KING\u2019S POWER 50ml, 1개',
+      hook:'쓰레드에서 13만 조회로 터진 그 크림',
+      price:40500, was:63000, reviews:97, rocket:false,
+      img:'img/beauty_idesel.png', url:'https://link.coupang.com/a/iFULMVOv7Y' },
+    { name:'바이오더마 아토덤 울트라 크림, 500ml',
+      hook:'대용량 보습 크림, 온 가족이 같이 씁니다',
+      price:20120, reviews:5646, rocket:false,
+      img:'img/beauty_bioderma.png', url:'https://link.coupang.com/a/iFV02tqpbw' },
+    { name:'고려은단 비타민C 1000, 180정',
+      hook:'후기 32만, 하루 한 알로 반년',
+      price:17020, reviews:323420, rocket:true,
+      img:'img/beauty_vitaminc.jpeg', url:'https://link.coupang.com/a/iFV2hMz6Zg' },
+    { name:'킹스파워 아클레어 약산성 클렌징폼, 500ml',
+      hook:'약산성 500ml 한 통, 39,500원에서 33,200원',
+      price:33200, was:39500, reviews:174, rocket:false,
+      img:'img/beauty_aclear.png', url:'https://link.coupang.com/a/iFV1Fto0oS' }
+  ],
+  kids: [
+    { name:'2080 키즈플러스 3스텝 스위트 치약, 80g, 6개',
+      hook:'6~9세 불소 치약 6개, 12,600원에서 9,520원',
+      price:9520, was:12600, reviews:2094, rocket:true,
+      img:'img/kids_toothpaste.jpg', url:'https://link.coupang.com/a/iFYPySxhkW' },
+    { name:'베베숲 오리진 유아물티슈 캡형 100매, 10개',
+      hook:'후기 10만, 17,900원에서 12,900원',
+      price:12900, was:17900, reviews:103294, rocket:true,
+      img:'img/kids_wipes.jpg', url:'https://link.coupang.com/a/iFV4tVhT3I' },
+    { name:'그린핑거 파워클린 소다 캡슐세제, 33개입',
+      hook:'아이옷 한 통, 27,900원에서 10,350원 (62%)',
+      price:10350, was:27900, reviews:1075, rocket:true,
+      img:'img/kids_detergent.jpg', url:'https://link.coupang.com/a/iFYRg9w06e' },
+    { name:'시샘 304 국산 4찬 스텐 식판, 1개',
+      hook:'304 스텐이라 냄새·변색 없이 오래',
+      price:8720, reviews:2432, rocket:true,
+      img:'img/kids_tray.jpg', url:'https://link.coupang.com/a/iFV3KfNqma' },
+    { name:'몽디에스 수딩 젤, 200ml, 2개',
+      hook:'땀띠·긁은 자리에, 2개 구성 34,000원',
+      price:34000, reviews:899, rocket:true,
+      img:'img/kids_sudding.jpg', url:'https://link.coupang.com/a/iFV2YUzJ8u' }
+  ]
+};
 
+/* ── 레시피 4편 ── */
 const RECIPES = [
   {
-    id:'cabbage',
-    no:'01',
+    id:'cabbage', no:'01',
     title:'양배추 계란 치즈 오코노미야끼',
     dek:'양배추 반 통이 한 접시로. 밀가루는 두 스푼만, 나머지는 채소로 채웁니다.',
-    img:'downloads/recipe_cabbage_egg_web.jpg',
+    img:'img/recipe_cabbage.jpg',
     time:10, level:'쉬움', serves:'1~2인',
-    cats:['diet','kids','fridge'],
-    tags:['계란','양배추','치즈'],
     ing:[
       {n:'양배추 1/4통 (약 200g)'},
       {n:'계란 2개'},
@@ -650,23 +474,16 @@ const RECIPES = [
     ],
     note:'고기 없이도 저녁이 되는 날이 있어요. 아이 몫엔 케첩을 더, 제 몫엔 마요네즈를 뺍니다. 다음 날 팬에 살짝 데우면 다시 바삭해져요.',
     saver:{ name:'10초 양배추 채칼', desc:'채 썰기 5분이 30초가 됩니다. 씻어서 바로 꽂아 쓰는 스테인리스 날.', buy:'양배추 채칼' },
-    picks:[
-      {label:'저당 알룰로스', buy:'저당 알룰로스'},
-      {label:'모짜렐라 슈레드 치즈', buy:'모짜렐라 치즈'},
-      {label:'쯔유 500ml', buy:'쯔유'}
-    ]
+    picks:[{label:'저당 알룰로스', buy:'저당 알룰로스'},{label:'모짜렐라 슈레드 치즈', buy:'모짜렐라 치즈'},{label:'쯔유 500ml', buy:'쯔유'}]
   },
   {
-    id:'tofu',
-    no:'02',
+    id:'tofu', no:'02',
     title:'설렁탕 육수 순두부 계란찜',
     dek:'물 대신 설렁탕 육수. 전자레인지 4분이면 몽글몽글해집니다.',
-    img:'downloads/recipe_tofu_egg_web.jpg',
+    img:'img/recipe_tofu.jpg',
     time:5, level:'쉬움', serves:'2인',
-    cats:['kids','diet','fridge'],
-    tags:['계란','두부','설렁탕육수'],
     ing:[
-      {n:'한촌 설렁탕 육수 200ml'},
+      {n:'한촌 설렁탕 육수 200ml', buy:'한촌 설렁탕 육수'},
       {n:'순두부 1/2팩 (약 150g)', buy:'순두부'},
       {n:'계란 2개'},
       {n:'대파 조금'},
@@ -682,20 +499,14 @@ const RECIPES = [
     ],
     note:'설렁탕 육수 한 팩을 소분해 두면 계란찜, 떡국, 죽까지 다 됩니다. 육수에 간이 있어서 소금은 한 꼬집이면 충분하고, 출력마다 다르니 30초 단위로 확인하세요.',
     saver:{ name:'뚜껑 있는 실리콘 찜용기', desc:'랩 씌우고 젓는 일이 사라집니다. 그릇째 전자레인지, 그릇째 식탁.', buy:'실리콘 찜용기' },
-    picks:[
-      {label:'한촌 설렁탕 육수', buy:'한촌 설렁탕 육수'},
-      {label:'국산 순두부', buy:'순두부'}
-    ]
+    picks:[{label:'한촌 설렁탕 육수', buy:'한촌 설렁탕 육수'},{label:'국산 순두부', buy:'순두부'}]
   },
   {
-    id:'riceball',
-    no:'03',
+    id:'riceball', no:'03',
     title:'참치마요 야채 주먹밥',
     dek:'7세가 한입에 넣는 크기로. 아홉 개 굴리면 도시락 반찬 하나가 끝납니다.',
-    img:'downloads/recipe_tuna_riceball_web.jpg',
+    img:'img/recipe_riceball.jpg',
     time:5, level:'쉬움', serves:'8~10개',
-    cats:['kids'],
-    tags:['참치'],
     ing:[
       {n:'따뜻한 밥 1공기'},
       {n:'참치캔 1개 (기름·물 빼기)', buy:'참치캔'},
@@ -713,23 +524,16 @@ const RECIPES = [
     ],
     note:'아침에 급한 날 이거 여섯 개면 아이 도시락은 끝납니다. 냉동해 둔 건 다음 날 전자레인지 20초, 식으면 다시 딱딱해지니 그때그때 데워 주세요.',
     saver:{ name:'실리콘 주먹밥 틀', desc:'손 안 대고 세 번 누르면 모양이 잡힙니다. 아이가 직접 만드는 날도 생겨요.', buy:'주먹밥 틀' },
-    picks:[
-      {label:'참치캔 6개', buy:'참치캔'},
-      {label:'김가루', buy:'김가루'},
-      {label:'한입 주먹밥 틀', buy:'주먹밥 틀'}
-    ]
+    picks:[{label:'참치캔 6개', buy:'참치캔'},{label:'김가루', buy:'김가루'},{label:'한입 주먹밥 틀', buy:'주먹밥 틀'}]
   },
   {
-    id:'wings',
-    no:'04',
+    id:'wings', no:'04',
     title:'간장 버터 닭윙 구이',
     dek:'기름에 안 튀기고 팬 하나로 10분. 레몬 한 조각이 끝맛을 바꿉니다.',
-    img:'downloads/recipe_soybutter_wings_web.jpg',
+    img:'img/recipe_wings.jpg',
     time:10, level:'보통', serves:'2~3인',
-    cats:['diet','kids','fridge'],
-    tags:['닭윙'],
     ing:[
-      {n:'닭윙(아랫날개) 8~10개'},
+      {n:'닭윙(아랫날개) 8~10개', buy:'닭윙'},
       {n:'간장 2큰술'},
       {n:'저당 알룰로스 1큰술', buy:'저당 알룰로스'},
       {n:'다진 마늘 0.5큰술'},
@@ -745,229 +549,209 @@ const RECIPES = [
     ],
     note:'닭윙은 살이 적어 손으로 들고 먹기 좋아서, 애가 밥 한 공기를 더 먹는 날이 이 레시피예요. 남은 소스에 새우나 오징어를 볶으면 다음 날 반찬이 하나 더 생깁니다.',
     saver:{ name:'에어프라이어 종이호일', desc:'에어프라이어로 돌릴 때 깔아 두면 설거지가 30초. 180도 15분 기준.', buy:'에어프라이어 종이호일' },
-    picks:[
-      {label:'무항생제 닭윙', buy:'닭윙'},
-      {label:'에어프라이어 종이호일', buy:'에어프라이어 종이호일'},
-      {label:'저당 알룰로스', buy:'저당 알룰로스'}
-    ]
+    picks:[{label:'무항생제 닭윙', buy:'닭윙'},{label:'에어프라이어 종이호일', buy:'에어프라이어 종이호일'},{label:'저당 알룰로스', buy:'저당 알룰로스'}]
   }
 ];
 
-/* ───────────────────────────  상태  ─────────────────────────── */
-const state = { cat:'all', time:'all', tags:new Set() };
+/* ───────────────────── GA4 이벤트 ───────────────────── */
+function trackTab(name, key){
+  if (typeof gtag === 'function'){
+    gtag('event', 'tab_view', { tab_name: name, tab_key: key });
+  }
+}
 
-const $  = (sel, root) => (root || document).querySelector(sel);
-const $$ = (sel, root) => Array.prototype.slice.call((root || document).querySelectorAll(sel));
+function trackCoupang(a){
+  if (typeof gtag !== 'function') return;
+  const params = {
+    item_name: a.dataset.item || '',
+    category: a.dataset.cat || '',
+    link_url: a.href,
+    transport_type: 'beacon'
+  };
+  if (a.dataset.price) params.price = Number(a.dataset.price);
+  gtag('event', 'coupang_click', params);
+}
+
+document.addEventListener('click', function (e){
+  const a = e.target.closest('a[href*="link.coupang.com"]');
+  if (a) trackCoupang(a);
+}, false);
+
+/* ───────────────────── 유틸 ───────────────────── */
+const $  = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.prototype.slice.call((r || document).querySelectorAll(s));
 const esc = (s) => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const won = (n) => n.toLocaleString('ko-KR') + '원';
+const count = (n) => n >= 10000 ? (Math.floor(n/1000)/10).toString().replace(/\.0$/,'') + '만' : n.toLocaleString('ko-KR');
 
-const CAT_COUNT = { all: RECIPES.length, diet:0, kids:0, fridge:0 };
-RECIPES.forEach(r => r.cats.forEach(c => { CAT_COUNT[c] += 1; }));
-
-function matches(r){
-  if (state.cat !== 'all' && r.cats.indexOf(state.cat) === -1) return false;
-  if (state.time === '5'  && r.time > 5)  return false;
-  if (state.time === '10' && r.time > 10) return false;
-  if (state.tags.size){
-    const hit = Array.from(state.tags).some(t => r.tags.indexOf(t) > -1);
-    if (!hit) return false;
-  }
-  return true;
-}
-
-/* ─────────────────────────  카드 렌더  ───────────────────────── */
-function cardHTML(r){
-  const cats = r.cats.map(c => CAT_LABEL[c]).join(' · ');
-  return '<li>' +
-    '<button class="card" data-open="' + r.id + '" type="button">' +
-      '<span class="card__media media">' +
-        '<img src="' + esc(r.img) + '" alt="' + esc(r.title) + '" loading="lazy" decoding="async">' +
-        '<span class="card__fallback">' + esc(r.title) + '</span>' +
+/* ───────────────────── 상품 패널 ───────────────────── */
+function dealHTML(p, idx){
+  const off = p.was ? Math.round((1 - p.price / p.was) * 100) : 0;
+  return '' +
+  '<a class="deal" href="' + esc(p.url) + '" target="_blank" rel="nofollow sponsored noopener" ' +
+     'data-item="' + esc(p.name) + '" data-cat="' + esc(TABS[current].label) + '" data-price="' + p.price + '">' +
+    '<img class="deal__img" src="' + esc(p.img) + '" alt="' + esc(p.name) + '" loading="' + (idx === 0 ? 'eager' : 'lazy') + '" decoding="async">' +
+    '<span class="deal__body">' +
+      '<span class="deal__name">' + esc(p.name) + '</span>' +
+      '<span class="deal__hook">' + esc(p.hook) + '</span>' +
+      '<span class="deal__meta">' +
+        (off ? '<span class="off num">' + off + '%</span>' : '') +
+        '<span class="price num">' + won(p.price) + '</span>' +
+        '<span class="badge">' + (p.rocket ? '로켓배송' : '무료배송') + '</span>' +
+        '<span class="reviews num">후기 ' + count(p.reviews) + '</span>' +
       '</span>' +
-      '<span class="card__body">' +
-        '<span class="card__kicker">' +
-          '<span class="card__no">' + r.no + '</span>' +
-          '<span class="sep">·</span><span>' + esc(cats) + '</span>' +
-        '</span>' +
-        '<span class="card__title">' + esc(r.title) + '</span>' +
-        '<span class="card__dek">' + esc(r.dek) + '</span>' +
-        '<span class="card__foot">' +
-          '<span class="card__tags">#' + r.tags.join(' #') + ' · 재료 ' + r.ing.length + '</span>' +
-          '<span class="card__open num">' + r.time + '분 · 레시피 →</span>' +
-        '</span>' +
-      '</span>' +
-    '</button>' +
-  '</li>';
+    '</span>' +
+  '</a>';
 }
 
-function render(){
-  const list = RECIPES.filter(matches);
-  $('#list').innerHTML = list.map(cardHTML).join('');
-  $('#list').hidden = list.length === 0;
-  $('#empty').hidden = list.length !== 0;
-
-  const active = state.cat !== 'all' || state.time !== 'all' || state.tags.size > 0;
-  $('#resultText').innerHTML = '<b class="num">' + list.length + '편</b>의 레시피';
-  $('#resetBtn').hidden = !active;
-}
-
-/* ─────────────────────────  필터 이벤트  ───────────────────────── */
-$$('.tab').forEach(btn => {
-  btn.addEventListener('click', () => {
-    state.cat = btn.dataset.cat;
-    $$('.tab').forEach(b => b.setAttribute('aria-selected', String(b === btn)));
-    render();
-  });
-});
-
-$$('.pill[data-time]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    state.time = btn.dataset.time;
-    $$('.pill[data-time]').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
-    render();
-  });
-});
-
-$$('.chip[data-tag]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const tag = btn.dataset.tag;
-    if (state.tags.has(tag)) state.tags.delete(tag); else state.tags.add(tag);
-    btn.setAttribute('aria-pressed', String(state.tags.has(tag)));
-    render();
-  });
-});
-
-function resetFilters(){
-  state.cat = 'all'; state.time = 'all'; state.tags.clear();
-  $$('.tab').forEach(b => b.setAttribute('aria-selected', String(b.dataset.cat === 'all')));
-  $$('.pill[data-time]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.time === 'all')));
-  $$('.chip[data-tag]').forEach(b => b.setAttribute('aria-pressed','false'));
-  render();
-}
-$('#resetBtn').addEventListener('click', resetFilters);
-$('#emptyReset').addEventListener('click', resetFilters);
-
-/* 카테고리 탭 숫자 */
-$$('[data-count]').forEach(el => { el.textContent = CAT_COUNT[el.dataset.count]; });
-
-/* ─────────────────────  이미지 폴백  ───────────────────── */
-document.addEventListener('error', (e) => {
-  const t = e.target;
-  if (t && t.tagName === 'IMG'){
-    const wrap = t.closest('.media');
-    if (wrap) wrap.classList.add('is-missing');
+function panelHTML(key){
+  const t = TABS[key];
+  if (key === 'recipe'){
+    return '' +
+      '<div class="panel__head">' +
+        '<h2 class="panel__title">' + esc(t.label) + '</h2>' +
+        '<p class="panel__sub">' + esc(t.sub) + '</p>' +
+      '</div>' +
+      '<ul class="recipes">' + RECIPES.map(function (r){
+        return '<li>' +
+          '<button class="recipe" type="button" data-open="' + r.id + '">' +
+            '<img class="recipe__img" src="' + esc(r.img) + '" alt="' + esc(r.title) + '" loading="lazy" decoding="async">' +
+            '<span class="recipe__title">' + esc(r.title) + '</span>' +
+            '<span class="recipe__dek">' + esc(r.dek) + '</span>' +
+            '<span class="recipe__meta num">' + r.time + '분 · ' + esc(r.serves) + ' · 재료 ' + r.ing.length + '</span>' +
+          '</button>' +
+        '</li>';
+      }).join('') + '</ul>' +
+      '<div class="tip">' +
+        '<p class="tip__title">재료 체크는 레시피 안에서</p>' +
+        '<p class="tip__body">레시피를 열면 냉장고 재료를 하나씩 체크할 수 있어요. 없는 재료만 쿠팡으로 이어집니다.</p>' +
+      '</div>';
   }
-}, true);
-
-/* ─────────────────────  재료 체크 저장  ───────────────────── */
-const STORE_KEY = 'dkb-checklist-v1';
-function readStore(){
-  try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}') || {}; } catch(e){ return {}; }
-}
-function writeStore(v){
-  try { localStorage.setItem(STORE_KEY, JSON.stringify(v)); } catch(e){ /* 사생활 보호 모드 등 */ }
+  return '' +
+    '<div class="panel__head">' +
+      '<h2 class="panel__title">' + esc(t.label) + '</h2>' +
+      '<p class="panel__sub">' + esc(t.sub) + '</p>' +
+    '</div>' +
+    PRODUCTS[key].map(function (p, i){ return dealHTML(p, i); }).join('');
 }
 
-/* ─────────────────────  상세 시트  ───────────────────── */
+/* ───────────────────── 탭 ───────────────────── */
+let current = 'living';
+
+function renderPanel(){
+  $('#panel').innerHTML = panelHTML(current);
+}
+
+$$('.tab').forEach(function (btn){
+  btn.addEventListener('click', function (){
+    const key = btn.dataset.tab;
+    if (!TABS[key]) return;
+    current = key;
+    $$('.tab').forEach(function (b){ b.setAttribute('aria-selected', String(b === btn)); });
+    renderPanel();
+    trackTab(TABS[key].label, key);
+  });
+});
+
+/* ───────────────────── 상세 시트 ───────────────────── */
 const sheet = $('#sheet');
 const sheetBody = $('#sheetBody');
 let lastFocus = null;
 
-function sheetHTML(r){
-  const cats = r.cats.map(c => CAT_LABEL[c]).join(' · ');
+function buyUrl(q){
+  return CHEAT[q] || ('https://www.coupang.com/np/search?q=' + encodeURIComponent(q));
+}
 
-  const ingHTML = r.ing.map((it, i) =>
-    '<li class="ing">' +
+function sheetHTML(r){
+  const ingHTML = r.ing.map(function (it, i){
+    return '<li class="ing">' +
       '<label class="ing__label">' +
         '<input type="checkbox" data-ing="' + r.id + ':' + i + '">' +
         '<span class="ing__box" aria-hidden="true"></span>' +
         '<span class="ing__name">' + esc(it.n) + '</span>' +
       '</label>' +
-      (it.buy ? '<a class="ing__buy" href="' + esc(buyUrl(it.buy)) + '" target="_blank" rel="nofollow sponsored noopener">로켓배송 →</a>' : '') +
-    '</li>'
-  ).join('');
+      (it.buy ? '<a class="ing__buy" href="' + esc(buyUrl(it.buy)) + '" target="_blank" rel="nofollow sponsored noopener" data-item="' + esc(it.buy) + '" data-cat="레시피 재료">로켓배송 →</a>' : '') +
+    '</li>';
+  }).join('');
 
-  const stepsHTML = r.steps.map((s, i) =>
-    '<li><span class="steps__n num">' + String(i + 1).padStart(2,'0') + '</span><p>' + esc(s) + '</p></li>'
-  ).join('');
+  const stepsHTML = r.steps.map(function (s, i){
+    return '<li><span class="steps__n num">' + String(i + 1) + '</span><p>' + esc(s) + '</p></li>';
+  }).join('');
 
-  const picksHTML = r.picks.map(p =>
-    '<li><a class="chip" href="' + esc(buyUrl(p.buy)) + '" target="_blank" rel="nofollow sponsored noopener">' +
-      esc(p.label) + ' <i aria-hidden="true">↗</i></a></li>'
-  ).join('');
+  const picksHTML = r.picks.map(function (p){
+    return '<li><a class="pick" href="' + esc(buyUrl(p.buy)) + '" target="_blank" rel="nofollow sponsored noopener" ' +
+      'data-item="' + esc(p.label) + '" data-cat="레시피 재료">' + esc(p.label) + ' <span aria-hidden="true">↗</span></a></li>';
+  }).join('');
 
   return '' +
-    '<div class="sheet__cover media">' +
-      '<img src="' + esc(r.img) + '" alt="' + esc(r.title) + '">' +
-      '<span class="card__fallback">' + esc(r.title) + '</span>' +
-    '</div>' +
-    '<div class="sheet__content">' +
-      '<p class="sheet__kicker"><span>' + r.no + '</span><span>·</span><span>' + esc(cats) + '</span></p>' +
+    '<img class="sheet__cover" src="' + esc(r.img) + '" alt="' + esc(r.title) + '">' +
+    '<div class="sheet__body">' +
+      '<p class="sheet__kicker num">레시피 ' + r.no + '</p>' +
       '<h2 class="sheet__title" id="sheetTitle">' + esc(r.title) + '</h2>' +
       '<p class="sheet__dek">' + esc(r.dek) + '</p>' +
-
-      '<ul class="meta">' +
+      '<ul class="facts">' +
         '<li><span>조리</span><b class="num">' + r.time + '분</b></li>' +
         '<li><span>난이도</span><b>' + esc(r.level) + '</b></li>' +
         '<li><span>분량</span><b>' + esc(r.serves) + '</b></li>' +
       '</ul>' +
-
-      '<section class="sec">' +
-        '<p class="sec__label">In my fridge</p>' +
-        '<div class="sec__head">' +
-          '<h3 class="sec__title">냉장고 재료 체크</h3>' +
-          '<p class="sec__progress"><b id="ingDone">0</b> / ' + r.ing.length + ' 준비</p>' +
+      '<section class="block">' +
+        '<div class="block__head">' +
+          '<h3 class="block__title">냉장고 재료 체크</h3>' +
+          '<p class="block__count"><b id="ingDone" class="num">0</b> / ' + r.ing.length + '</p>' +
         '</div>' +
         '<ul class="ing-list">' + ingHTML + '</ul>' +
       '</section>' +
-
-      '<section class="sec">' +
-        '<p class="sec__label">Method</p>' +
-        '<h3 class="sec__title">만드는 순서</h3>' +
+      '<section class="block">' +
+        '<h3 class="block__title">만드는 순서</h3>' +
         '<ol class="steps">' + stepsHTML + '</ol>' +
       '</section>' +
-
       '<figure class="note">' +
-        '<figcaption class="note__label">에디터 노트</figcaption>' +
+        '<figcaption class="note__label">한 줄 메모</figcaption>' +
         '<p>' + esc(r.note) + '</p>' +
       '</figure>' +
-
       '<div class="saver">' +
         '<span class="saver__label">시간을 아껴준 것</span>' +
         '<span class="saver__name">' + esc(r.saver.name) + '</span>' +
         '<span class="saver__desc">' + esc(r.saver.desc) + '</span>' +
-        '<a class="saver__link" href="' + esc(buyUrl(r.saver.buy)) + '" target="_blank" rel="nofollow sponsored noopener">보러 가기 ↗</a>' +
+        '<a class="saver__link" href="' + esc(buyUrl(r.saver.buy)) + '" target="_blank" rel="nofollow sponsored noopener" ' +
+          'data-item="' + esc(r.saver.name) + '" data-cat="레시피 주방템">보러 가기 ↗</a>' +
       '</div>' +
-
-      '<section class="sec">' +
-        '<p class="sec__label">Shop the recipe</p>' +
-        '<h3 class="sec__title">이 레시피 추천 재료 · 주방템</h3>' +
+      '<section class="block">' +
+        '<h3 class="block__title">이 레시피에 쓴 재료·주방템</h3>' +
         '<ul class="picks">' + picksHTML + '</ul>' +
       '</section>' +
-
       '<p class="sheet__disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>' +
     '</div>';
 }
 
+/* 재료 체크 저장 */
+const STORE_KEY = 'dkb-checklist-v2';
+function readStore(){
+  try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}') || {}; } catch (e){ return {}; }
+}
+function writeStore(v){
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(v)); } catch (e){ /* 사생활 보호 모드 */ }
+}
+
 function updateIngDone(){
   const boxes = $$('input[data-ing]', sheetBody);
-  const done = boxes.filter(b => b.checked).length;
+  const done = boxes.filter(function (b){ return b.checked; }).length;
   const el = $('#ingDone');
   if (el) el.textContent = done;
 }
 
 function openSheet(id){
-  const r = RECIPES.find(x => x.id === id);
+  const r = RECIPES.find(function (x){ return x.id === id; });
   if (!r) return;
 
   lastFocus = document.activeElement;
   sheetBody.innerHTML = sheetHTML(r);
-  $('#sheetBarLabel').textContent = 'Recipe ' + r.no;
+  $('#sheetBarLabel').textContent = '레시피 ' + r.no;
 
-  /* 저장된 체크 상태 복원 */
   const store = readStore();
-  $$('input[data-ing]', sheetBody).forEach(box => {
+  $$('input[data-ing]', sheetBody).forEach(function (box){
     if (store[box.dataset.ing]) box.checked = true;
-    box.addEventListener('change', () => {
+    box.addEventListener('change', function (){
       const s = readStore();
       if (box.checked) s[box.dataset.ing] = 1; else delete s[box.dataset.ing];
       writeStore(s);
@@ -976,36 +760,31 @@ function openSheet(id){
   });
   updateIngDone();
 
-  sheet.setAttribute('aria-hidden','false');
+  sheet.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
   $('#sheetScroll').scrollTop = 0;
   const closeBtn = $('.sheet__close', sheet);
-  if (closeBtn) closeBtn.focus({ preventScroll:true });
+  if (closeBtn) closeBtn.focus({ preventScroll: true });
 }
 
 function closeSheet(){
-  sheet.setAttribute('aria-hidden','true');
+  sheet.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
-  if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll:true });
+  if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
 }
 
-document.addEventListener('click', (e) => {
+document.addEventListener('click', function (e){
   const opener = e.target.closest('[data-open]');
   if (opener){ openSheet(opener.dataset.open); return; }
-
-  if (e.target.closest('[data-close]')){ closeSheet(); return; }
-
-  /* 바깥 링크는 새 창으로 (file:// 로 열어도 이동하지 않게) */
-  const a = e.target.closest('a[href^="http"]');
-  if (a) a.setAttribute('target','_blank');
+  if (e.target.closest('[data-close]')){ closeSheet(); }
 });
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', function (e){
   if (e.key === 'Escape' && sheet.getAttribute('aria-hidden') === 'false') closeSheet();
 });
 
-/* 초기 렌더 */
-render();
+/* 첫 화면 */
+renderPanel();
 </script>
 </body>
 </html>
