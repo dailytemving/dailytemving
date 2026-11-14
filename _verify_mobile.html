@@ -13,25 +13,42 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="f"><span>1. 첫 화면 · 10분 레시피 (기본 탭)</span><iframe id="a" src="./index.html" title="a" scrolling="no"></iframe></div>
-  <div class="f"><span>2. 냉장고 재료 '계란 + 양배추' 선택</span><iframe id="b" src="./index.html" title="b" scrolling="no"></iframe></div>
-  <div class="f"><span>3. 추천템 모음 탭 · 카테고리 필터</span><iframe id="c" src="./index.html" title="c" scrolling="no"></iframe></div>
+  <div class="f"><span>1. 첫 화면 · 10분 레시피 (기본 탭)</span><iframe id="a" src="./index.html?v=3" title="a" scrolling="no"></iframe></div>
+  <div class="f"><span>2. 냉장고 재료 '계란 + 양배추' 선택</span><iframe id="b" src="./index.html?v=3" title="b" scrolling="no"></iframe></div>
+  <div class="f"><span>3. 추천템 모음 탭 · 카테고리 필터</span><iframe id="c" src="./index.html?v=3" title="c" scrolling="no"></iframe></div>
 </div>
+<div id="st" style="position:fixed;left:8px;bottom:8px;font:12px/1.4 monospace;color:#666;background:#fff;padding:4px 6px;border-radius:4px"></div>
 <script>
-window.addEventListener('load', function (){
-  setTimeout(function (){
-    try {
-      var b = document.getElementById('b').contentDocument;
-      b.querySelector('[data-ing="계란"]').click();
-      b.querySelector('[data-ing="양배추"]').click();
-    } catch (e){ document.title = 'B ERR ' + e.message; }
-    try {
-      var c = document.getElementById('c').contentDocument;
-      c.querySelector('.tab[data-tab="deals"]').click();
-      c.querySelector('.chip[data-cat="beauty"]').click();
-    } catch (e){ document.title = 'C ERR ' + e.message; }
-  }, 1500);
-});
+var log = [];
+function pick(doc, sel){ return doc ? doc.querySelector(sel) : null; }
+function apply(){
+  try {
+    var b = document.getElementById('b').contentDocument;
+    var e1 = pick(b, '[data-ing="계란"]');
+    var e2 = pick(b, '[data-ing="양배추"]');
+    if (!e1 || !e2) { log.push('b:no-chip'); return false; }
+    if (e1.getAttribute('aria-pressed') !== 'true') e1.click();
+    if (e2.getAttribute('aria-pressed') !== 'true') e2.click();
+    log.push('b:ok');
+  } catch (e){ log.push('b:err ' + e.message); }
+  try {
+    var c = document.getElementById('c').contentDocument;
+    var tab = pick(c, '.tab[data-tab="deals"]');
+    if (!tab) { log.push('c:no-tab'); return false; }
+    if (tab.getAttribute('aria-selected') !== 'true') tab.click();
+    var chip = pick(c, '.chip[data-cat="beauty"]');
+    if (chip && chip.getAttribute('aria-pressed') !== 'true') chip.click();
+    log.push('c:ok');
+  } catch (e){ log.push('c:err ' + e.message); }
+  return true;
+}
+var tries = 0;
+var timer = setInterval(function (){
+  tries++;
+  var ok = apply();
+  document.getElementById('st').textContent = 'try ' + tries + ' · ' + log.join(' | ');
+  if (tries >= 8 || (ok && log.length >= 2)) clearInterval(timer);
+}, 700);
 </script>
 </body>
 </html>
