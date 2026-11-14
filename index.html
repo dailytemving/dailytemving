@@ -138,7 +138,8 @@
   .ing-filter{margin:13px 0 0;padding:11px 13px 12px;border:1px solid var(--line);border-radius:12px;background:var(--cream)}
   .ing-filter__label{margin:0;font-size:12.5px;font-weight:700;letter-spacing:-.02em;color:var(--green)}
   .ing-filter .chips{margin:9px 0 0;gap:6px}
-  .ing-filter .chip{padding:7px 10px;font-size:13px;background:#fff}
+  .ing-filter .chip{padding:7px 10px;font-size:13px}
+  .ing-filter .chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
   .ing-filter__hint{margin:9px 0 0;font-size:12.5px;line-height:1.5;color:var(--sub)}
   .ing-filter__hint b{color:var(--ink);font-weight:700}
   .empty{margin:16px 0 0;padding:22px 18px;border:1px dashed #D9D3C6;border-radius:12px;text-align:center}
@@ -794,8 +795,8 @@ function ingChipsHTML(){
 
 function ingHintHTML(list){
   if (!picked.length) return '재료를 누르면 그 재료가 들어간 레시피만 남습니다. 여러 개를 누르면 <b>모두</b> 들어간 레시피예요.';
-  if (!list.length) return '고른 재료 <b>' + esc(picked.join(' · ')) + '</b> 로는 지금 레시피가 없어요.';
-  return '고른 재료 <b>' + esc(picked.join(' · ')) + '</b> 로 되는 레시피 <b class="num">' + list.length + '편</b>';
+  if (!list.length) return '고른 재료 <b>' + esc(picked.join(' · ')) + '</b> 조합은 지금 레시피가 없어요.';
+  return '고른 재료 <b>' + esc(picked.join(' · ')) + '</b> 기준, 레시피 <b class="num">' + list.length + '편</b>';
 }
 
 function recipeListHTML(list){
