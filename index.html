@@ -299,7 +299,7 @@
   <header class="head">
     <div class="head__meta">
       <span class="num">2026. 11. 15</span>
-      <span>레시피 <b class="num">4</b> · 추천템 <b class="num">20</b></span>
+      <span>레시피 <b class="num">6</b> · 추천템 <b class="num">20</b></span>
     </div>
     <h1 class="logo">데일리<em>템빙</em></h1>
     <p class="lede">7세 워킹맘의 살림·식단 치트키</p>
@@ -372,7 +372,7 @@
    쿠파스 링크: 파트너스 '간편 링크' 채널 dailytemving
    ===================================================================== */
 
-/* 레시피·치트키용 쿠파스 단축 링크 (채널 dailytemving) — 13종 */
+/* 레시피·치트키용 쿠파스 단축 링크 (채널 dailytemving) — 15종 */
 const CHEAT = {
   '부침가루':              'https://link.coupang.com/a/iFO7gAGhvU',
   '쯔유':                  'https://link.coupang.com/a/iFO5oqLHi0',
@@ -386,7 +386,9 @@ const CHEAT = {
   '김가루':                'https://link.coupang.com/a/iFPko13UVo',
   '주먹밥 틀':             'https://link.coupang.com/a/iFPlVLRT9U',
   '닭윙':                  'https://link.coupang.com/a/iFPnctz7e0',
-  '에어프라이어 종이호일': 'https://link.coupang.com/a/iFPol035K8'
+  '에어프라이어 종이호일': 'https://link.coupang.com/a/iFPol035K8',
+  '햇반 발아현미밥':       'https://link.coupang.com/a/iFYvcjmrgy',
+  '저당 치폴레소스':       'https://link.coupang.com/a/iFYmhz6cHA'
 };
 
 /* ── 메인 탭 2개 ── */
@@ -600,6 +602,56 @@ const RECIPES = [
     note:'닭윙은 살이 적어 손으로 들고 먹기 좋아서, 애가 밥 한 공기를 더 먹는 날이 이 레시피예요. 남은 소스에 새우나 오징어를 볶으면 다음 날 반찬이 하나 더 생깁니다.',
     saver:{ name:'에어프라이어 종이호일', desc:'에어프라이어로 돌릴 때 깔아 두면 설거지가 30초. 180도 15분 기준.', buy:'에어프라이어 종이호일' },
     picks:[{label:'무항생제 닭윙', buy:'닭윙'},{label:'에어프라이어 종이호일', buy:'에어프라이어 종이호일'},{label:'저당 알룰로스', buy:'저당 알룰로스'}]
+  },
+  {
+    id:'cabbage_tuna', no:'05',
+    title:'양배추 참치 덮밥',
+    dek:'채 쓴 양배추와 참치캔, 반숙 계란 하나. 5분이면 유지어터 한 그릇이 됩니다.',
+    img:'img/recipe_cabbage_tuna.jpg',
+    tags:['양배추','참치','계란','현미밥'],
+    time:5, level:'쉬움', serves:'1인',
+    ing:[
+      {n:'햇반 발아현미밥 1개 (130g)', buy:'햇반 발아현미밥'},
+      {n:'양배추 1/4통 (약 200g)'},
+      {n:'참치캔 1개 (기름 빼기)', buy:'참치캔'},
+      {n:'계란 1개'},
+      {n:'저당 치폴레소스 1큰술', buy:'저당 치폴레소스'},
+      {n:'참기름 반 티스푼'},
+      {n:'소금 · 후추 조금'}
+    ],
+    steps:[
+      '양배추는 채칼로 얇게 채 썰고, 참치캔은 체에 발쳐 기름을 뺍니다.',
+      '팬에 참기름 반 티스푼을 두르고 양배추를 중불에서 1분만 볶아 숨을 죽입니다. 소금·후추로 약하게 간합니다.',
+      '계란은 반숙 프라이로 1개. 현미밥은 전자레인지 2분 데워 그릇에 펍니다.',
+      '밥 위에 양배추 → 참치 → 계란 순으로 올리고 저당 치폴레소스를 1큰술 둘러 비벼 먹습니다.'
+    ],
+    note:'참치 기름을 안 빼면 5분 요리가 느끼해져요. 아이 몫은 치폴레소스를 빼고 참기름만 살짝, 어른 몫은 청양고추 한 조각을 더해도 됩니다.',
+    saver:{ name:'10초 양배추 채칼', desc:'채 썰기 5분이 30초. 이 덮밥은 채 썰기 속도가 전부입니다.', buy:'양배추 채칼' },
+    picks:[{label:'햇반 발아현미밥 6개', buy:'햇반 발아현미밥'},{label:'저당 치폴레소스', buy:'저당 치폴레소스'},{label:'동원 참치캔', buy:'참치캔'}]
+  },
+  {
+    id:'baby_butter', no:'06',
+    title:'유아식 간장버터 계란덮밥',
+    dek:'7세가 제일 먼저 비우는 그릇. 밥·계란·버터·간장, 3분이면 끝납니다.',
+    img:'img/recipe_baby_butter.jpg',
+    tags:['계란','버터','간장'],
+    time:3, level:'쉬움', serves:'1인(아이)',
+    ing:[
+      {n:'따뜻한 밥 1/2공기'},
+      {n:'계란 1개 (노른자 또는 스크램블)'},
+      {n:'무염버터 1/2조각'},
+      {n:'혼쯔유 1작은술 (또는 아이용 저염간장)', buy:'쯔유'},
+      {n:'김자반 한 꼬집', buy:'김가루'}
+    ],
+    steps:[
+      '따뜻한 밥 반 공기를 그릇에 담고 무염버터 반 조각을 올려 30초 두어 살짝 녹입니다.',
+      '계란은 노른자만 올리거나, 노른자를 싫어하면 스크램블로 만들어 얹습니다.',
+      '혼쯔유 1작은술을 숟가락에 받아 밥 가장자리에 둘러 붓습니다.',
+      '김자반을 한 꼬집 올리고 비벼 줍니다. 간이 약하면 간장을 반 작은술만 더합니다.'
+    ],
+    note:'간장을 밥 위에 그냥 붓지 말고 숟가락에 받아 가장자리에 두르면 짠 부분이 몰리지 않아요. 계란은 완전히 익혀 주고, 버터는 무염으로 씁니다.',
+    saver:{ name:'실리콘 주먹밥 틀', desc:'비빈 밥을 틀에 눌러 주면 손 안 대고 아이가 집어 먹습니다.', buy:'주먹밥 틀' },
+    picks:[{label:'혼쯔유 500ml', buy:'쯔유'},{label:'김가루', buy:'김가루'}]
   }
 ];
 
@@ -639,7 +691,7 @@ let currentTab = 'recipe';   /* 1번 탭: 10분 레시피 */
 let currentCat = 'living';   /* 추천템 모음 안의 필터 */
 
 /* 냉장고 재료 필터 — 고른 재료가 모두 들어간 레시피만 남깁니다 */
-const INGREDIENTS = ['계란','양배추','치즈','순두부','설렁탕 육수','참치','김가루','닭윙'];
+const INGREDIENTS = ['계란','양배추','참치','순두부','설렁탕 육수','닭윙','현미밥','버터','간장'];
 let picked = [];
 
 /* ───────────────────── 상품 리스트 ───────────────────── */
@@ -699,7 +751,7 @@ function recipeListHTML(list){
   if (!items.length){
     return '<div class="empty">' +
       '<p class="empty__title">그 조합으로 되는 레시피가 없어요</p>' +
-      '<p class="empty__body">재료를 하나만 빼보세요. 계란 · 양배추 · 순두부 · 참치 · 닭윙 중 하나만 골라도 바로 나옵니다.</p>' +
+      '<p class="empty__body">재료를 하나만 빼보세요. 계란 · 양배추 · 참치 · 순두부 · 닭윙 중 하나만 골라도 바로 나옵니다.</p>' +
       '<button class="empty__reset" type="button" data-reset>전체 레시피 보기</button>' +
     '</div>';
   }
@@ -740,13 +792,13 @@ function recipePanelHTML(){
     '<div id="recipeList">' + recipeListHTML(list) + '</div>' +
     '<section class="cheat-sec">' +
       '<h3 class="cheat-sec__title">냉장고에 없는 것만 담으세요</h3>' +
-      '<p class="cheat-sec__sub">레시피 4편에 쓰는 재료·주방템 13가지. 전부 로켓배송 링크입니다.</p>' +
+      '<p class="cheat-sec__sub">레시피 6편에 쓰는 재료·주방템 15가지. 전부 로켓배송 링크입니다.</p>' +
       cheatGridHTML() +
       '<p class="cheat-note">레시피를 열면 재료를 하나씩 체크할 수 있어요. 체크한 건 이 폰에만 저장됩니다.</p>' +
     '</section>' +
     '<div class="tip">' +
       '<p class="tip__title">10분이 안 되는 날엔</p>' +
-      '<p class="tip__body">계란찜과 주먹밥은 재료만 있으면 5분입니다. 퇴근길에 그 두 개만 떠올려도 저녁은 됩니다.</p>' +
+      '<p class="tip__body">아이 덮밥은 3분, 어른 덮밥과 주먹밥은 5분입니다. 퇴근길에 그 두 개만 떠올려도 저녁은 됩니다.</p>' +
     '</div>';
 }
 
