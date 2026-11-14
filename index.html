@@ -593,12 +593,25 @@
    데일리템빙 키친북 v1 — 레시피 데이터 + 인터랙션
    -------------------------------------------------------------------------
    쿠파스 링크 교체 지점:
-   아래 PRODUCT_LINKS 에 partners.coupang.com '간편 링크 만들기'(채널 dailytemving)
+   위 PRODUCT_LINKS 에 partners.coupang.com '간편 링크 만들기'(채널 dailytemving)
    로 만든 단축 URL 을 넣으면, 재료·주방템 링크가 곧바로 수수료 링크가 됩니다.
-   지금 값이 비어 있는 항목은 쿠팡 검색 링크로 연결됩니다(수수료 미발생).
+   양배추·계란·버터 등 집에 늘 있는 기본 재료는 buy 키를 두지 않아 링크가 달리지 않습니다.
    ========================================================================= */
 const PRODUCT_LINKS = {
-  /* '재료명': 'https://link.coupang.com/a/...', */
+  /* 쿠팡 파트너스 '간편 링크/상품 링크' (채널: dailytemving) 단축 URL */
+  '부침가루':              'https://link.coupang.com/a/iFO7gAGhvU',
+  '쯔유':                  'https://link.coupang.com/a/iFO5oqLHi0',
+  '저당 알룰로스':         'https://link.coupang.com/a/iFO6qV8oMe',
+  '양배추 채칼':           'https://link.coupang.com/a/iFPaJSbM4a',
+  '모짜렐라 치즈':         'https://link.coupang.com/a/iFPcm7WaY0',
+  '순두부':                'https://link.coupang.com/a/iFPdzig1xQ',
+  '실리콘 찜용기':         'https://link.coupang.com/a/iFPeWIoMrA',
+  '한촌 설렁탕 육수':      'https://link.coupang.com/a/iFPhQNtX7A',
+  '참치캔':                'https://link.coupang.com/a/iFPi67U4xo',
+  '김가루':                'https://link.coupang.com/a/iFPko13UVo',
+  '주먹밥 틀':             'https://link.coupang.com/a/iFPlVLRT9U',
+  '닭윙':                  'https://link.coupang.com/a/iFPnctz7e0',
+  '에어프라이어 종이호일': 'https://link.coupang.com/a/iFPol035K8'
 };
 
 function buyUrl(query){
@@ -620,7 +633,7 @@ const RECIPES = [
     cats:['diet','kids','fridge'],
     tags:['계란','양배추','치즈'],
     ing:[
-      {n:'양배추 1/4통 (약 200g)', buy:'양배추'},
+      {n:'양배추 1/4통 (약 200g)'},
       {n:'계란 2개'},
       {n:'모짜렐라 슈레드 치즈 한 줌'},
       {n:'부침가루 2큰술', buy:'부침가루'},
@@ -638,7 +651,6 @@ const RECIPES = [
     note:'고기 없이도 저녁이 되는 날이 있어요. 아이 몫엔 케첩을 더, 제 몫엔 마요네즈를 뺍니다. 다음 날 팬에 살짝 데우면 다시 바삭해져요.',
     saver:{ name:'10초 양배추 채칼', desc:'채 썰기 5분이 30초가 됩니다. 씻어서 바로 꽂아 쓰는 스테인리스 날.', buy:'양배추 채칼' },
     picks:[
-      {label:'양배추 1통', buy:'양배추'},
       {label:'저당 알룰로스', buy:'저당 알룰로스'},
       {label:'모짜렐라 슈레드 치즈', buy:'모짜렐라 치즈'},
       {label:'쯔유 500ml', buy:'쯔유'}
@@ -672,8 +684,7 @@ const RECIPES = [
     saver:{ name:'뚜껑 있는 실리콘 찜용기', desc:'랩 씌우고 젓는 일이 사라집니다. 그릇째 전자레인지, 그릇째 식탁.', buy:'실리콘 찜용기' },
     picks:[
       {label:'한촌 설렁탕 육수', buy:'한촌 설렁탕 육수'},
-      {label:'국산 순두부', buy:'순두부'},
-      {label:'무항생제 계란 15구', buy:'계란'}
+      {label:'국산 순두부', buy:'순두부'}
     ]
   },
   {
@@ -722,7 +733,7 @@ const RECIPES = [
       {n:'간장 2큰술'},
       {n:'저당 알룰로스 1큰술', buy:'저당 알룰로스'},
       {n:'다진 마늘 0.5큰술'},
-      {n:'무염 버터 1조각', buy:'무염 버터'},
+      {n:'무염 버터 1조각'},
       {n:'레몬 1/2개'},
       {n:'통후추 · (있으면) 우유 조금'}
     ],
@@ -737,8 +748,7 @@ const RECIPES = [
     picks:[
       {label:'무항생제 닭윙', buy:'닭윙'},
       {label:'에어프라이어 종이호일', buy:'에어프라이어 종이호일'},
-      {label:'저당 알룰로스', buy:'저당 알룰로스'},
-      {label:'무염 버터', buy:'무염 버터'}
+      {label:'저당 알룰로스', buy:'저당 알룰로스'}
     ]
   }
 ];
