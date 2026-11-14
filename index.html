@@ -12,23 +12,23 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>데일리템빙 | 오늘 고른 살림·식단 꿀템과 10분 집밥</title>
-<meta name="description" content="7세 아이 키우는 워킹맘의 살림·식단 추천템 20개와 10분 집밥 레시피 4편. 1만원 이하 로켓배송 위주로 매일 다시 고릅니다.">
+<title>데일리템빙</title>
+<meta name="description" content="7세 워킹맘의 살림·식단 치트키">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="canonical" href="https://dailytemving.github.io/dailytemving/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="데일리템빙">
-<meta property="og:title" content="데일리템빙 | 오늘 고른 살림·식단 꿀템과 10분 집밥">
-<meta property="og:description" content="살림·리빙, 유지어터 식단, 뷰티·관리, 육아·아이 — 카테고리마다 지금 제일 잘 나가는 5개만. 10분 집밥 레시피 4편도 함께.">
+<meta property="og:title" content="데일리템빙">
+<meta property="og:description" content="7세 워킹맘의 살림·식단 치트키">
 <meta property="og:url" content="https://dailytemving.github.io/dailytemving/">
 <meta property="og:image" content="https://dailytemving.github.io/dailytemving/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="데일리템빙 | 오늘 고른 살림·식단 꿀템과 10분 집밥">
-<meta name="twitter:description" content="살림·리빙, 유지어터 식단, 뷰티·관리, 육아·아이 — 카테고리마다 지금 제일 잘 나가는 5개만.">
+<meta name="twitter:title" content="데일리템빙">
+<meta name="twitter:description" content="7세 워킹맘의 살림·식단 치트키">
 <meta name="twitter:image" content="https://dailytemving.github.io/dailytemving/og-cover.jpg">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -71,10 +71,9 @@
   .head{padding:26px 20px 22px}
   .head__meta{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--muted)}
   .head__meta b{font-weight:600;color:var(--sub)}
-  .logo{margin:12px 0 0;font-size:27px;font-weight:800;letter-spacing:-.045em;line-height:1.2}
+  .logo{margin:12px 0 0;font-size:28px;font-weight:800;letter-spacing:-.045em;line-height:1.2}
   .logo em{font-style:normal;color:var(--green)}
-  .lede{margin:10px 0 0;font-size:15px;line-height:1.6;color:var(--sub)}
-  .lede b{font-weight:600;color:var(--ink)}
+  .lede{margin:9px 0 0;font-size:15px;line-height:1.6;color:var(--sub)}
 
   /* ── 공통 섹션 ── */
   .sec{padding:26px 20px}
@@ -83,46 +82,71 @@
   .sec__sub{margin:6px 0 0;font-size:14px;color:var(--sub)}
 
   /* ── 오늘의 갓성비 띠배너 ── */
-  .strip{background:var(--cream)}
-  .strip__track{display:flex;gap:10px;overflow-x:auto;margin:14px -20px 0;padding:0 20px 2px;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .strip{background:var(--cream);padding:20px 20px 22px}
+  .strip__title{margin:0;font-size:16px;font-weight:700;letter-spacing:-.03em}
+  .strip__sub{margin:4px 0 0;font-size:13.5px;color:var(--sub)}
+  .strip__track{display:flex;gap:10px;overflow-x:auto;margin:12px -20px 0;padding:0 20px 2px;scroll-snap-type:x mandatory;scrollbar-width:none}
   .strip__track::-webkit-scrollbar{display:none}
   .mini{
-    flex:0 0 auto;width:268px;scroll-snap-align:start;
+    flex:0 0 auto;width:264px;scroll-snap-align:start;
     display:flex;align-items:center;gap:12px;
-    background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px;
+    background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;
     text-decoration:none;
   }
-  .mini__img{flex:0 0 auto;width:58px;height:58px;border-radius:8px;background:#fff;object-fit:contain;padding:3px;border:1px solid var(--line2)}
+  .mini__img{flex:0 0 auto;width:56px;height:56px;border-radius:8px;background:#fff;object-fit:contain;padding:3px;border:1px solid var(--line2)}
   .mini__body{min-width:0}
-  .mini__name{display:block;font-size:14px;line-height:1.45;color:var(--ink);font-weight:500;
+  .mini__name{display:block;font-size:13.5px;line-height:1.45;color:var(--ink);font-weight:500;
     display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-  .mini__price{display:flex;align-items:baseline;gap:6px;margin-top:5px}
+  .mini__price{display:flex;align-items:baseline;gap:6px;margin-top:4px}
   .mini__price b{font-size:15px;font-weight:700}
   .mini__price span{font-size:13px;color:var(--sub)}
 
-  /* ── 탭 ── */
+  /* ── 메인 탭 (2개) ── */
   .tabs{
-    position:sticky;top:0;z-index:30;display:flex;gap:2px;overflow-x:auto;
+    position:sticky;top:0;z-index:30;display:flex;
     background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
     border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    padding:0 10px;scrollbar-width:none;
   }
-  .tabs::-webkit-scrollbar{display:none}
   .tab{
     appearance:none;border:0;background:none;font:inherit;cursor:pointer;
-    padding:15px 10px 13px;font-size:15px;line-height:1.2;font-weight:500;
-    color:var(--muted);white-space:nowrap;position:relative;
+    flex:1 1 0;padding:15px 8px 13px;font-size:16px;line-height:1.2;font-weight:500;
+    color:var(--muted);white-space:nowrap;position:relative;letter-spacing:-.02em;
   }
+  .tab + .tab{border-left:1px solid var(--line2)}
   .tab[aria-selected="true"]{color:var(--ink);font-weight:700}
-  .tab[aria-selected="true"]::after{content:"";position:absolute;left:10px;right:10px;bottom:-1px;height:2px;background:var(--ink)}
+  .tab[aria-selected="true"]::after{content:"";position:absolute;left:22px;right:22px;bottom:-1px;height:2px;background:var(--ink)}
   .tab:focus-visible{outline:2px solid var(--green);outline-offset:-3px;border-radius:6px}
 
-  /* ── 상품 리스트 ── */
+  /* ── 패널 공통 ── */
   .panel{padding:4px 20px 30px}
-  .panel__head{padding:20px 0 4px}
+  .panel__head{padding:22px 0 2px}
   .panel__title{margin:0;font-size:19px;font-weight:700;letter-spacing:-.03em}
+  .panel__title span{font-size:14px;font-weight:600;color:var(--green)}
   .panel__sub{margin:5px 0 0;font-size:14px;color:var(--sub)}
 
+  /* ── 카테고리 필터 칩 ── */
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+  .chip{
+    appearance:none;font:inherit;cursor:pointer;padding:9px 14px;border-radius:999px;
+    border:1px solid var(--line);background:#fff;color:var(--sub);
+    font-size:14px;line-height:1.2;font-weight:500;letter-spacing:-.02em;
+  }
+  .chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff;font-weight:700}
+  .chip:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+  /* ── 냉장고 재료 필터 (레시피 탭 상단) ── */
+  .ing-filter{margin:18px 0 0;padding:14px 15px 15px;border:1px solid var(--line);border-radius:12px;background:var(--cream)}
+  .ing-filter__label{margin:0;font-size:13px;font-weight:700;letter-spacing:-.02em;color:var(--green)}
+  .ing-filter .chips{margin:10px 0 0;gap:7px}
+  .ing-filter .chip{padding:8px 12px;font-size:13.5px;background:#fff}
+  .ing-filter__hint{margin:10px 0 0;font-size:13px;line-height:1.55;color:var(--sub)}
+  .ing-filter__hint b{color:var(--ink);font-weight:700}
+  .empty{margin:16px 0 0;padding:22px 18px;border:1px dashed #D9D3C6;border-radius:12px;text-align:center}
+  .empty__title{margin:0;font-size:15px;font-weight:700;letter-spacing:-.02em}
+  .empty__body{margin:7px 0 0;font-size:14px;line-height:1.6;color:var(--sub)}
+  .empty__reset{appearance:none;font:inherit;margin-top:14px;padding:10px 16px;border:1px solid var(--green);border-radius:999px;background:#fff;color:var(--green);font-size:14px;font-weight:600;cursor:pointer}
+
+  /* ── 상품 리스트 ── */
   .deal{display:flex;gap:14px;padding:18px 0;border-top:1px solid var(--line2);text-decoration:none}
   .deal:first-of-type{border-top:0}
   .deal__img{flex:0 0 auto;width:92px;height:92px;border:1px solid var(--line2);border-radius:10px;background:#fff;object-fit:contain;padding:5px}
@@ -136,15 +160,34 @@
   .badge{font-size:12px;font-weight:600;color:var(--green);background:var(--green-soft);border-radius:5px;padding:2px 7px;line-height:1.5}
   .badge--mute{color:var(--sub);background:#F4F1EA}
   .reviews{font-size:13px;color:var(--muted)}
+  .deal-list__head{padding:20px 0 2px}
+  .deal-list__title{margin:0;font-size:16px;font-weight:700;letter-spacing:-.02em}
+  .deal-list__title em{font-style:normal;margin-left:5px;font-size:13px;font-weight:600;color:var(--green)}
+  .deal-list__sub{margin:4px 0 0;font-size:13.5px;color:var(--sub)}
 
   /* ── 레시피 ── */
-  .recipes{list-style:none;margin:0;padding:0;display:grid;gap:26px}
+  .recipes{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:26px}
   .recipe{display:block;width:100%;text-align:left;padding:0;border:0;background:none;font:inherit;cursor:pointer;color:inherit}
   .recipe__img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:var(--cream)}
   .recipe__title{margin:11px 0 0;font-size:17px;font-weight:700;letter-spacing:-.025em;line-height:1.4}
   .recipe__dek{margin:5px 0 0;font-size:14px;line-height:1.55;color:var(--sub)}
   .recipe__meta{margin-top:8px;font-size:13px;color:var(--muted)}
   .recipe:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:6px}
+
+  /* ── 치트키 재료 13종 ── */
+  .cheat-sec{margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+  .cheat-sec__title{margin:0;font-size:17px;font-weight:700;letter-spacing:-.03em}
+  .cheat-sec__sub{margin:5px 0 0;font-size:13.5px;line-height:1.55;color:var(--sub)}
+  .cheat-grid{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0 0;padding:0}
+  .cheat{
+    display:flex;align-items:center;justify-content:space-between;gap:8px;
+    padding:12px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;
+    font-size:14px;line-height:1.3;font-weight:500;letter-spacing:-.02em;color:var(--ink);text-decoration:none;
+  }
+  .cheat span{flex:0 0 auto;color:var(--green);font-size:12px}
+  .cheat:active{background:var(--cream)}
+  .cheat-grid li:last-child:nth-child(odd){grid-column:1 / -1}
+  .cheat-note{margin:10px 0 0;font-size:12.5px;line-height:1.5;color:var(--muted)}
 
   .tip{margin:26px 0 0;padding:16px 18px;border-radius:12px;background:var(--cream);border:1px solid var(--line2)}
   .tip__title{margin:0;font-size:15px;font-weight:700}
@@ -256,16 +299,16 @@
   <header class="head">
     <div class="head__meta">
       <span class="num">2026. 11. 15</span>
-      <span>추천템 <b class="num">20</b> · 레시피 <b class="num">4</b></span>
+      <span>레시피 <b class="num">4</b> · 추천템 <b class="num">20</b></span>
     </div>
     <h1 class="logo">데일리<em>템빙</em></h1>
-    <p class="lede">7세 아이 키우는 워킹맘의 <b>살림 · 식단 · 10분 집밥</b>.<br>카테고리마다 지금 제일 잘 나가는 5개만 골라 두었습니다.</p>
+    <p class="lede">7세 워킹맘의 살림·식단 치트키</p>
   </header>
 
   <!-- 오늘의 살림 갓성비 -->
   <section class="sec strip" aria-label="오늘의 살림 갓성비">
-    <h2 class="sec__title">오늘의 살림 갓성비</h2>
-    <p class="sec__sub">레시피 보다가 같이 담는 두 개</p>
+    <h2 class="strip__title">오늘의 살림 갓성비</h2>
+    <p class="strip__sub">레시피 보다가 같이 담는 두 개</p>
 
     <div class="strip__track">
       <a class="mini" href="https://link.coupang.com/a/iFujx12Fky" target="_blank" rel="nofollow sponsored noopener"
@@ -287,20 +330,17 @@
     </div>
   </section>
 
-  <!-- 탭 -->
-  <div class="tabs" role="tablist" aria-label="카테고리">
-    <button class="tab" role="tab" data-tab="living" aria-selected="true" aria-controls="panel">살림·리빙</button>
-    <button class="tab" role="tab" data-tab="diet" aria-selected="false" aria-controls="panel">유지어터·식단</button>
-    <button class="tab" role="tab" data-tab="beauty" aria-selected="false" aria-controls="panel">뷰티·관리</button>
-    <button class="tab" role="tab" data-tab="kids" aria-selected="false" aria-controls="panel">육아·아이</button>
-    <button class="tab" role="tab" data-tab="recipe" aria-selected="false" aria-controls="panel">10분 레시피</button>
+  <!-- 메인 탭 2개 -->
+  <div class="tabs" role="tablist" aria-label="메인 메뉴">
+    <button class="tab" role="tab" data-tab="recipe" aria-selected="true" aria-controls="panel">10분 레시피</button>
+    <button class="tab" role="tab" data-tab="deals" aria-selected="false" aria-controls="panel">추천템 모음</button>
   </div>
 
   <main class="panel" id="panel" role="tabpanel" aria-live="polite"></main>
 
   <footer class="foot">
     <p class="foot__brand">데일리템빙</p>
-    <p class="foot__line">살림·식단 추천템은 매일 다시 고르고, 레시피는 매주 목요일에 몇 편씩 올립니다.<br>가격·재고는 확인한 시점 기준이라 판매처 사정에 따라 달라질 수 있어요.</p>
+    <p class="foot__line">10분 레시피는 매주 목요일에 몇 편씩 올리고, 추천템 20개는 매일 다시 고릅니다.<br>가격·재고는 확인한 시점 기준이라 판매처 사정에 따라 달라질 수 있어요.</p>
     <p class="foot__disc">레시피 재료 링크와 추천템 링크는 모두 쿠팡 파트너스 링크입니다.</p>
   </footer>
 </div>
@@ -327,11 +367,12 @@
 
 <script>
 /* =====================================================================
-   데일리템빙 v2 — 추천템 TOP 5 · 10분 레시피 · GA4 (tab_view / coupang_click)
+   데일리템빙 v3 — 10분 레시피(1번 탭) · 추천템 모음(2번 탭, 4개 필터)
+   GA4: tab_view(메인 탭 + 카테고리 필터) / coupang_click
    쿠파스 링크: 파트너스 '간편 링크' 채널 dailytemving
    ===================================================================== */
 
-/* 레시피용 쿠파스 단축 링크 (채널 dailytemving) */
+/* 레시피·치트키용 쿠파스 단축 링크 (채널 dailytemving) — 13종 */
 const CHEAT = {
   '부침가루':              'https://link.coupang.com/a/iFO7gAGhvU',
   '쯔유':                  'https://link.coupang.com/a/iFO5oqLHi0',
@@ -348,13 +389,18 @@ const CHEAT = {
   '에어프라이어 종이호일': 'https://link.coupang.com/a/iFPol035K8'
 };
 
-/* ── 추천템: 카테고리당 TOP 5 ── */
-const TABS = {
-  living: { label:'살림·리빙', sub:'욕실·주방·수납, 오늘 바로 체감되는 것만' },
+/* ── 메인 탭 2개 ── */
+const MAIN = {
+  recipe: { label:'10분 레시피', sub:'냉장고에 있는 재료로 오늘 저녁 정하기' },
+  deals:  { label:'추천템 모음', sub:'카테고리마다 지금 제일 잘 나가는 5개 · 총 20개' }
+};
+
+/* ── 추천템 카테고리(필터) 4개 ── */
+const CATS = {
+  living: { label:'살림·리빙',     sub:'욕실·주방·수납, 오늘 바로 체감되는 것만' },
   diet:   { label:'유지어터·식단', sub:'1만원 이하 로켓배송, 냉장고에 하나씩' },
-  beauty: { label:'뷰티·관리', sub:'한 번 사면 오래 쓰는 것들' },
-  kids:   { label:'육아·아이', sub:'6~9세 아이 키우며 다시 사는 것들' },
-  recipe: { label:'10분 레시피', sub:'냉장고에 있는 재료로 오늘 저녁 정하기' }
+  beauty: { label:'뷰티·관리',     sub:'한 번 사면 오래 쓰는 것들' },
+  kids:   { label:'육아·아이',     sub:'6~9세 아이 키우며 다시 사는 것들' }
 };
 
 const PRODUCTS = {
@@ -455,6 +501,7 @@ const RECIPES = [
     title:'양배추 계란 치즈 오코노미야끼',
     dek:'양배추 반 통이 한 접시로. 밀가루는 두 스푼만, 나머지는 채소로 채웁니다.',
     img:'img/recipe_cabbage.jpg',
+    tags:['양배추','계란','치즈'],
     time:10, level:'쉬움', serves:'1~2인',
     ing:[
       {n:'양배추 1/4통 (약 200g)'},
@@ -481,6 +528,7 @@ const RECIPES = [
     title:'설렁탕 육수 순두부 계란찜',
     dek:'물 대신 설렁탕 육수. 전자레인지 4분이면 몽글몽글해집니다.',
     img:'img/recipe_tofu.jpg',
+    tags:['설렁탕 육수','순두부','계란'],
     time:5, level:'쉬움', serves:'2인',
     ing:[
       {n:'한촌 설렁탕 육수 200ml', buy:'한촌 설렁탕 육수'},
@@ -506,6 +554,7 @@ const RECIPES = [
     title:'참치마요 야채 주먹밥',
     dek:'7세가 한입에 넣는 크기로. 아홉 개 굴리면 도시락 반찬 하나가 끝납니다.',
     img:'img/recipe_riceball.jpg',
+    tags:['참치','김가루'],
     time:5, level:'쉬움', serves:'8~10개',
     ing:[
       {n:'따뜻한 밥 1공기'},
@@ -531,6 +580,7 @@ const RECIPES = [
     title:'간장 버터 닭윙 구이',
     dek:'기름에 안 튀기고 팬 하나로 10분. 레몬 한 조각이 끝맛을 바꿉니다.',
     img:'img/recipe_wings.jpg',
+    tags:['닭윙'],
     time:10, level:'보통', serves:'2~3인',
     ing:[
       {n:'닭윙(아랫날개) 8~10개', buy:'닭윙'},
@@ -554,9 +604,9 @@ const RECIPES = [
 ];
 
 /* ───────────────────── GA4 이벤트 ───────────────────── */
-function trackTab(name, key){
+function trackTab(name, key, level){
   if (typeof gtag === 'function'){
-    gtag('event', 'tab_view', { tab_name: name, tab_key: key });
+    gtag('event', 'tab_view', { tab_name: name, tab_key: key, tab_level: level || 'main' });
   }
 }
 
@@ -584,12 +634,20 @@ const esc = (s) => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(
 const won = (n) => n.toLocaleString('ko-KR') + '원';
 const count = (n) => n >= 10000 ? (Math.floor(n/1000)/10).toString().replace(/\.0$/,'') + '만' : n.toLocaleString('ko-KR');
 
-/* ───────────────────── 상품 패널 ───────────────────── */
+/* ───────────────────── 상태 ───────────────────── */
+let currentTab = 'recipe';   /* 1번 탭: 10분 레시피 */
+let currentCat = 'living';   /* 추천템 모음 안의 필터 */
+
+/* 냉장고 재료 필터 — 고른 재료가 모두 들어간 레시피만 남깁니다 */
+const INGREDIENTS = ['계란','양배추','치즈','순두부','설렁탕 육수','참치','김가루','닭윙'];
+let picked = [];
+
+/* ───────────────────── 상품 리스트 ───────────────────── */
 function dealHTML(p, idx){
   const off = p.was ? Math.round((1 - p.price / p.was) * 100) : 0;
   return '' +
   '<a class="deal" href="' + esc(p.url) + '" target="_blank" rel="nofollow sponsored noopener" ' +
-     'data-item="' + esc(p.name) + '" data-cat="' + esc(TABS[current].label) + '" data-price="' + p.price + '">' +
+     'data-item="' + esc(p.name) + '" data-cat="' + esc(CATS[currentCat].label) + '" data-price="' + p.price + '">' +
     '<img class="deal__img" src="' + esc(p.img) + '" alt="' + esc(p.name) + '" loading="' + (idx === 0 ? 'eager' : 'lazy') + '" decoding="async">' +
     '<span class="deal__body">' +
       '<span class="deal__name">' + esc(p.name) + '</span>' +
@@ -604,54 +662,180 @@ function dealHTML(p, idx){
   '</a>';
 }
 
-function panelHTML(key){
-  const t = TABS[key];
-  if (key === 'recipe'){
-    return '' +
-      '<div class="panel__head">' +
-        '<h2 class="panel__title">' + esc(t.label) + '</h2>' +
-        '<p class="panel__sub">' + esc(t.sub) + '</p>' +
-      '</div>' +
-      '<ul class="recipes">' + RECIPES.map(function (r){
-        return '<li>' +
-          '<button class="recipe" type="button" data-open="' + r.id + '">' +
-            '<img class="recipe__img" src="' + esc(r.img) + '" alt="' + esc(r.title) + '" loading="lazy" decoding="async">' +
-            '<span class="recipe__title">' + esc(r.title) + '</span>' +
-            '<span class="recipe__dek">' + esc(r.dek) + '</span>' +
-            '<span class="recipe__meta num">' + r.time + '분 · ' + esc(r.serves) + ' · 재료 ' + r.ing.length + '</span>' +
-          '</button>' +
-        '</li>';
-      }).join('') + '</ul>' +
-      '<div class="tip">' +
-        '<p class="tip__title">재료 체크는 레시피 안에서</p>' +
-        '<p class="tip__body">레시피를 열면 냉장고 재료를 하나씩 체크할 수 있어요. 없는 재료만 쿠팡으로 이어집니다.</p>' +
-      '</div>';
+function dealListHTML(){
+  const c = CATS[currentCat];
+  const items = PRODUCTS[currentCat];
+  return '' +
+    '<div class="deal-list__head">' +
+      '<h3 class="deal-list__title">' + esc(c.label) + ' TOP <em class="num">' + items.length + '</em></h3>' +
+      '<p class="deal-list__sub">' + esc(c.sub) + '</p>' +
+    '</div>' +
+    items.map(function (p, i){ return dealHTML(p, i); }).join('');
+}
+
+/* ───────────────────── 레시피 패널 ───────────────────── */
+function recipesFor(list){
+  if (!list.length) return RECIPES;
+  return RECIPES.filter(function (r){
+    return list.every(function (t){ return r.tags.indexOf(t) >= 0; });
+  });
+}
+
+function ingChipsHTML(){
+  return '<button class="chip" type="button" data-ing="__all" aria-pressed="' + (!picked.length) + '">전체</button>' +
+    INGREDIENTS.map(function (t){
+      return '<button class="chip" type="button" data-ing="' + esc(t) + '" aria-pressed="' + (picked.indexOf(t) >= 0) + '">' + esc(t) + '</button>';
+    }).join('');
+}
+
+function ingHintHTML(list){
+  if (!picked.length) return '재료를 누르면 그 재료가 들어간 레시피만 남습니다. 여러 개를 누르면 <b>모두</b> 들어간 레시피예요.';
+  if (!list.length) return '고른 재료 <b>' + esc(picked.join(' · ')) + '</b> 로는 지금 레시피가 없어요.';
+  return '고른 재료 <b>' + esc(picked.join(' · ')) + '</b> 로 되는 레시피 <b class="num">' + list.length + '편</b>';
+}
+
+function recipeListHTML(list){
+  const items = list || RECIPES;
+  if (!items.length){
+    return '<div class="empty">' +
+      '<p class="empty__title">그 조합으로 되는 레시피가 없어요</p>' +
+      '<p class="empty__body">재료를 하나만 빼보세요. 계란 · 양배추 · 순두부 · 참치 · 닭윙 중 하나만 골라도 바로 나옵니다.</p>' +
+      '<button class="empty__reset" type="button" data-reset>전체 레시피 보기</button>' +
+    '</div>';
   }
+  return '<ul class="recipes">' + items.map(function (r){
+    return '<li>' +
+      '<button class="recipe" type="button" data-open="' + r.id + '">' +
+        '<img class="recipe__img" src="' + esc(r.img) + '" alt="' + esc(r.title) + '" loading="lazy" decoding="async">' +
+        '<span class="recipe__title">' + esc(r.title) + '</span>' +
+        '<span class="recipe__dek">' + esc(r.dek) + '</span>' +
+        '<span class="recipe__meta num">' + r.time + '분 · ' + esc(r.serves) + ' · 재료 ' + r.ing.length + '</span>' +
+      '</button>' +
+    '</li>';
+  }).join('') + '</ul>';
+}
+
+function cheatGridHTML(){
+  return '<ul class="cheat-grid">' + Object.keys(CHEAT).map(function (k){
+    return '<li>' +
+      '<a class="cheat" href="' + esc(CHEAT[k]) + '" target="_blank" rel="nofollow sponsored noopener" ' +
+        'data-item="' + esc(k) + '" data-cat="레시피 재료">' + esc(k) + ' <span aria-hidden="true">↗</span></a>' +
+    '</li>';
+  }).join('') + '</ul>';
+}
+
+function recipePanelHTML(){
+  const t = MAIN.recipe;
+  const list = recipesFor(picked);
   return '' +
     '<div class="panel__head">' +
       '<h2 class="panel__title">' + esc(t.label) + '</h2>' +
       '<p class="panel__sub">' + esc(t.sub) + '</p>' +
     '</div>' +
-    PRODUCTS[key].map(function (p, i){ return dealHTML(p, i); }).join('');
+    '<div class="ing-filter">' +
+      '<p class="ing-filter__label">냉장고에 있는 재료</p>' +
+      '<div class="chips" id="ingChips" role="group" aria-label="냉장고 재료 필터">' + ingChipsHTML() + '</div>' +
+      '<p class="ing-filter__hint" id="ingHint">' + ingHintHTML(list) + '</p>' +
+    '</div>' +
+    '<div id="recipeList">' + recipeListHTML(list) + '</div>' +
+    '<section class="cheat-sec">' +
+      '<h3 class="cheat-sec__title">냉장고에 없는 것만 담으세요</h3>' +
+      '<p class="cheat-sec__sub">레시피 4편에 쓰는 재료·주방템 13가지. 전부 로켓배송 링크입니다.</p>' +
+      cheatGridHTML() +
+      '<p class="cheat-note">레시피를 열면 재료를 하나씩 체크할 수 있어요. 체크한 건 이 폰에만 저장됩니다.</p>' +
+    '</section>' +
+    '<div class="tip">' +
+      '<p class="tip__title">10분이 안 되는 날엔</p>' +
+      '<p class="tip__body">계란찜과 주먹밥은 재료만 있으면 5분입니다. 퇴근길에 그 두 개만 떠올려도 저녁은 됩니다.</p>' +
+    '</div>';
 }
 
-/* ───────────────────── 탭 ───────────────────── */
-let current = 'living';
+function dealsPanelHTML(){
+  const t = MAIN.deals;
+  const chips = Object.keys(CATS).map(function (k){
+    return '<button class="chip" type="button" data-cat="' + k + '" aria-pressed="' + (k === currentCat) + '">' +
+      esc(CATS[k].label) + '</button>';
+  }).join('');
+  return '' +
+    '<div class="panel__head">' +
+      '<h2 class="panel__title">' + esc(t.label) + '</h2>' +
+      '<p class="panel__sub">' + esc(t.sub) + '</p>' +
+    '</div>' +
+    '<div class="chips" role="group" aria-label="카테고리 필터">' + chips + '</div>' +
+    '<div id="dealList">' + dealListHTML() + '</div>';
+}
 
 function renderPanel(){
-  $('#panel').innerHTML = panelHTML(current);
+  $('#panel').innerHTML = (currentTab === 'recipe') ? recipePanelHTML() : dealsPanelHTML();
 }
 
+/* ───────────────────── 메인 탭 2개 ───────────────────── */
 $$('.tab').forEach(function (btn){
   btn.addEventListener('click', function (){
     const key = btn.dataset.tab;
-    if (!TABS[key]) return;
-    current = key;
+    if (!MAIN[key] || key === currentTab) return;
+    currentTab = key;
     $$('.tab').forEach(function (b){ b.setAttribute('aria-selected', String(b === btn)); });
     renderPanel();
-    trackTab(TABS[key].label, key);
+    trackTab(MAIN[key].label, key, 'main');
   });
 });
+
+/* ───────────────────── 냉장고 재료 필터 ───────────────────── */
+function trackRecipeFilter(){
+  if (typeof gtag !== 'function') return;
+  gtag('event', 'recipe_filter', {
+    ingredients: picked.length ? picked.join(',') : 'all',
+    picked_count: picked.length,
+    recipe_count: recipesFor(picked).length
+  });
+}
+
+function refreshRecipeFilter(){
+  const list = recipesFor(picked);
+  const box = $('#recipeList');
+  if (box) box.innerHTML = recipeListHTML(list);
+  $$('[data-ing]').forEach(function (b){
+    const on = b.dataset.ing === '__all' ? !picked.length : picked.indexOf(b.dataset.ing) >= 0;
+    b.setAttribute('aria-pressed', String(on));
+  });
+  const hint = $('#ingHint');
+  if (hint) hint.innerHTML = ingHintHTML(list);
+}
+
+document.addEventListener('click', function (e){
+  if (e.target.closest('[data-reset]')){
+    picked = [];
+    refreshRecipeFilter();
+    trackRecipeFilter();
+    return;
+  }
+  const btn = e.target.closest('[data-ing]');
+  if (!btn || !btn.classList.contains('chip')) return;
+  const key = btn.dataset.ing;
+  if (key === '__all'){
+    picked = [];
+  } else if (picked.indexOf(key) >= 0){
+    picked = picked.filter(function (x){ return x !== key; });
+  } else {
+    picked = picked.concat(key);
+  }
+  refreshRecipeFilter();
+  trackRecipeFilter();
+}, false);
+
+/* ───────────────────── 카테고리 필터 칩 ───────────────────── */
+document.addEventListener('click', function (e){
+  const chip = e.target.closest('.chip');
+  if (!chip) return;
+  const key = chip.dataset.cat;
+  if (!CATS[key] || key === currentCat) return;
+  currentCat = key;
+  $$('.chip').forEach(function (b){ b.setAttribute('aria-pressed', String(b === chip)); });
+  const list = $('#dealList');
+  if (list) list.innerHTML = dealListHTML();
+  trackTab(CATS[key].label, 'deals_' + key, 'filter');
+}, false);
 
 /* ───────────────────── 상세 시트 ───────────────────── */
 const sheet = $('#sheet');
@@ -783,8 +967,9 @@ document.addEventListener('keydown', function (e){
   if (e.key === 'Escape' && sheet.getAttribute('aria-hidden') === 'false') closeSheet();
 });
 
-/* 첫 화면 */
+/* 첫 화면: 10분 레시피 */
 renderPanel();
+trackTab(MAIN.recipe.label, 'recipe', 'main');
 </script>
 </body>
 </html>
