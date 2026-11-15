@@ -341,7 +341,7 @@
 
   <footer class="foot">
     <p class="foot__brand">데일리템빙</p>
-    <p class="foot__line">10분 레시피는 매주 목요일에 몇 편씩 올리고, 추천템 20개는 매일 다시 고릅니다.<br>가격·재고는 확인한 시점 기준이라 판매처 사정에 따라 달라질 수 있어요.</p>
+    <p class="foot__line">10분 레시피는 매주 목요일에 몇 편씩 올리고, 추천템은 매일 다시 고릅니다.<br>가격·재고는 확인한 시점 기준이라 판매처 사정에 따라 달라질 수 있어요.</p>
     <p class="foot__disc">레시피 재료 링크와 추천템 링크는 모두 쿠팡 파트너스 링크입니다.</p>
   </footer>
 </div>
@@ -397,7 +397,7 @@ const CHEAT = {
 /* ── 메인 탭 2개 ── */
 const MAIN = {
   recipe: { label:'10분 레시피', sub:'냉장고에 있는 재료로 오늘 저녁 정하기' },
-  deals:  { label:'추천템 모음', sub:'카테고리마다 지금 제일 잘 나가는 5개 · 총 20개' }
+  deals:  { label:'추천템 모음', sub:'카테고리마다 지금 제일 잘 나가는 것만' }
 };
 
 /* ── 추천템 카테고리(필터) 4개 ── */
@@ -429,7 +429,11 @@ const PRODUCTS = {
     { name:'코멧 홈 길이조절 접시 정리대, 화이트',
       hook:'접시 세워두면 식기장이 두 배로',
       price:5790, reviews:11360, rocket:true,
-      img:'img/living_plate.jpg', url:'https://link.coupang.com/a/iFYdb9CDmu' }
+      img:'img/living_plate.jpg', url:'https://link.coupang.com/a/iFYdb9CDmu' },
+    { name:'고씨네 스마트 4in1 벽걸이형 변기솔 세트',
+      hook:'벽에 붙여두면 변기솔 물이 바닥에 안 떨어짐',
+      price:7590, reviews:1711, rocket:true,
+      img:'img/living_toilet_brush.jpg', url:'https://link.coupang.com/a/iFYaY9BY3U' }
   ],
   diet: [
     { name:'매일바이오 그릭요거트 무가당 플레인, 800g',
@@ -444,6 +448,10 @@ const PRODUCTS = {
       hook:'붓기 빼는 호박팥차, 회사에서도 한 잔',
       price:5900, reviews:41325, rocket:true,
       img:'img/diet_pumpkin.jpg', url:'https://link.coupang.com/a/iFYubffrSm' },
+    { name:'비비드키친 저칼로리 스위트칠리 소스, 280g',
+      hook:'두부·닭가슴살에 뿌리면 끝, 3,580원 저칼로리 소스',
+      price:3580, reviews:35135, rocket:true,
+      img:'img/diet_sweet_chili.jpg', url:'https://link.coupang.com/a/iFYmNq0MO4' },
     { name:'자연다움 바로먹는 퀵 오트밀, 1kg',
       hook:'1kg 한 봉지로 아침 준비 1분',
       price:5980, reviews:34396, rocket:true,
