@@ -62,9 +62,9 @@
   img{max-width:100%}
   a{color:inherit}
 
-  .page{max-width:600px;margin:0 auto;background:#fff;padding-bottom:96px}
+  .page{max-width:600px;margin:0 auto;background:#fff;padding-bottom:16px}
   @media (min-width:680px){
-    .page{margin:28px auto 44px;padding-bottom:88px;border-radius:16px;overflow:hidden}
+    .page{margin:28px auto 44px;padding-bottom:8px;border-radius:16px;overflow:hidden}
   }
 
   /* ── 상단 ── */
@@ -74,6 +74,18 @@
   .logo{margin:10px 0 0;font-size:26px;font-weight:800;letter-spacing:-.045em;line-height:1.2}
   .logo em{font-style:normal;color:var(--green)}
   .lede{margin:8px 0 0;font-size:14.5px;line-height:1.55;color:var(--sub)}
+
+  /* ── 상단 공정위 고지 ── */
+  .notice{
+    display:flex;align-items:flex-start;gap:7px;margin:0;padding:10px 20px 11px;
+    background:#fff;border-top:1px solid var(--line2);border-bottom:1px solid var(--line);
+    font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:-.005em;
+  }
+  .notice::before{
+    content:"";flex:0 0 auto;width:5px;height:5px;margin-top:6.5px;border-radius:50%;
+    background:var(--green);opacity:.5;
+  }
+  .notice span{word-break:keep-all}
 
   /* ── 공통 섹션 ── */
   .sec{padding:26px 20px}
@@ -201,16 +213,6 @@
   .foot__line{margin:8px 0 0;font-size:14px;line-height:1.6;color:var(--sub)}
   .foot__disc{margin:16px 0 0;padding-top:16px;border-top:1px solid var(--line2);font-size:13px;line-height:1.6;color:var(--muted)}
 
-  /* 고정 공정위 문구 */
-  .disc-bar{
-    position:fixed;left:50%;transform:translateX(-50%);bottom:0;z-index:40;
-    width:100%;max-width:600px;
-    padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px));
-    background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
-    border-top:1px solid var(--line);
-    font-size:13px;line-height:1.5;color:var(--muted);text-align:center;
-  }
-
   /* ── 상세 시트 ── */
   .sheet{position:fixed;inset:0;z-index:60}
   .sheet[aria-hidden="true"]{pointer-events:none}
@@ -307,6 +309,9 @@
     <p class="lede">7세 워킹맘의 살림·식단 치트키</p>
   </header>
 
+  <!-- 공정위 고지 (첫 화면 노출) -->
+  <p class="notice"><span>쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</span></p>
+
   <!-- 오늘의 살림 갓성비 -->
   <section class="sec strip" aria-label="오늘의 살림 갓성비">
     <h2 class="strip__title">오늘의 살림 갓성비</h2>
@@ -343,11 +348,9 @@
   <footer class="foot">
     <p class="foot__brand">데일리템빙</p>
     <p class="foot__line">7세 워킹맘이 골라 쓰는 10분 레시피와 살림·식단 추천템 모음.<br>가격·재고는 매주 월·목 다시 확인하며, 판매처 사정에 따라 달라질 수 있어요.</p>
-    <p class="foot__disc">레시피 재료 링크와 추천템 링크는 모두 쿠팡 파트너스 링크입니다.</p>
+    <p class="foot__disc">레시피 재료 링크와 추천템 링크는 모두 쿠팡 파트너스 링크입니다.<br>쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
   </footer>
 </div>
-
-<div class="disc-bar">쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
 
 <!-- 상세 시트 -->
 <div class="sheet" id="sheet" aria-hidden="true">
