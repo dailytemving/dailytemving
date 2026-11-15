@@ -155,6 +155,8 @@
   .deal__name{display:block;font-size:15px;font-weight:600;line-height:1.45;letter-spacing:-.02em;color:var(--ink);
     display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .deal__hook{display:block;margin-top:4px;font-size:14px;line-height:1.5;color:var(--sub)}
+  .deal__note{display:block;margin-top:5px;font-size:13px;line-height:1.55;color:var(--muted);word-break:keep-all;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .deal__meta{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:9px}
   .price{font-size:17px;font-weight:700;color:var(--ink)}
   .off{font-size:13px;font-weight:700;color:var(--sale)}
@@ -416,6 +418,7 @@ const PRODUCTS = {
       img:'img/living_mold.jpg', url:'https://link.coupang.com/a/iFYi3xIGqG' },
     { name:'홈스타 핑크파워 욕실 찌든때 클리너, 750ml',
       hook:'물때 낀 바닥·타일에 뿌리고 밀면 끝',
+      note:'락스 없이 5분. 묵은 실리콘 곰팡이는 락스가 확실해요.',
       price:6250, reviews:22542, rocket:true,
       img:'img/living_pinkpower.jpg', url:'https://link.coupang.com/a/iFX96ZEhYi' },
     { name:'펑크린 울트라겔 배수관 세정제, 500ml, 2개',
@@ -432,12 +435,14 @@ const PRODUCTS = {
       img:'img/living_plate.jpg', url:'https://link.coupang.com/a/iFYdb9CDmu' },
     { name:'고씨네 스마트 4in1 벽걸이형 변기솔 세트',
       hook:'벽에 붙여두면 변기솔 물이 바닥에 안 떨어짐',
+      note:'솔·바닥솔·틈새 브러시 세트. 거친 타일엔 접착이 약해요.',
       price:7590, reviews:1711, rocket:true,
       img:'img/living_toilet_brush.jpg', url:'https://link.coupang.com/a/iFYaY9BY3U' }
   ],
   diet: [
     { name:'매일바이오 그릭요거트 무가당 플레인, 800g',
       hook:'후기 22만, 무가당 그릭 한 통으로 아침 해결',
+      note:'편의점 작은 컵 대신 800g. 꾸덕한 수제보단 부드러워요.',
       price:7880, reviews:227637, rocket:true,
       img:'img/diet_greek.jpg', url:'https://link.coupang.com/a/iFYsZFuu60' },
     { name:'티젠 콤부차 레몬, 5g, 30개입',
@@ -450,6 +455,7 @@ const PRODUCTS = {
       img:'img/diet_pumpkin.jpg', url:'https://link.coupang.com/a/iFYubffrSm' },
     { name:'비비드키친 저칼로리 스위트칠리 소스, 280g',
       hook:'두부·닭가슴살에 뿌리면 끝, 3,580원 저칼로리 소스',
+      note:'구워 찍으면 탕수육 맛, 100g에 30kcal. 280g은 금방 비어요.',
       price:3580, reviews:35135, rocket:true,
       img:'img/diet_sweet_chili.jpg', url:'https://link.coupang.com/a/iFYmNq0MO4' },
     { name:'자연다움 바로먹는 퀵 오트밀, 1kg',
@@ -464,10 +470,12 @@ const PRODUCTS = {
   beauty: [
     { name:'일리윤 세라마이드 아토 집중크림, 230ml',
       hook:'후기 2.8만 로켓배송, 건조한 손·얼굴에 한 번에',
+      note:'이데셀 위에 덮는 세라마이드 크림. 기미·속건조 조합.',
       price:14140, was:22900, reviews:28907, rocket:true,
       img:'img/beauty_illiyoon.png', url:'https://link.coupang.com/a/iFUOV6mbgO' },
     { name:'이데셀크림 KING\u2019S POWER 50ml, 1개',
       hook:'쓰레드에서 13만 조회로 터진 그 크림',
+      note:'이데베논 미백 크림. 얇게 바르고 일리윤으로 덮어요.',
       price:40500, was:63000, reviews:97, rocket:false,
       img:'img/beauty_idesel.png', url:'https://link.coupang.com/a/iFULMVOv7Y' },
     { name:'바이오더마 아토덤 울트라 크림, 500ml',
@@ -765,6 +773,7 @@ function dealHTML(p, idx){
     '<span class="deal__body">' +
       '<span class="deal__name">' + esc(p.name) + '</span>' +
       '<span class="deal__hook">' + esc(p.hook) + '</span>' +
+      (p.note ? '<span class="deal__note">' + esc(p.note) + '</span>' : '') +
       '<span class="deal__meta">' +
         (off ? '<span class="off num">' + off + '%</span>' : '') +
         '<span class="price num">' + won(p.price) + '</span>' +
