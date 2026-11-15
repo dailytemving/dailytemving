@@ -75,12 +75,18 @@
   .logo em{font-style:normal;color:var(--green)}
   .lede{margin:8px 0 0;font-size:14.5px;line-height:1.55;color:var(--sub)}
 
-  /* ── 상단 공정위 고지 ── */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+  /* ── 공정위 고지 ── */
   .notice{
     display:flex;align-items:flex-start;gap:7px;margin:0;padding:10px 20px 11px;
     background:#fff;border-top:1px solid var(--line2);border-bottom:1px solid var(--line);
     font-size:12px;line-height:1.5;color:var(--muted);letter-spacing:-.005em;
   }
+  /* 추천템 탭 상단: 링크 구역 바로 위, 테두리 없이 */
+  .notice--lead{margin:2px -20px 0;padding:9px 20px 10px;border:0}
+  /* 레시피 탭: 재료 링크 바로 위 */
+  .notice--in{margin:12px 0 0;padding:0;border:0;background:none}
   .notice::before{
     content:"";flex:0 0 auto;width:5px;height:5px;margin-top:6.5px;border-radius:50%;
     background:var(--green);opacity:.5;
@@ -96,6 +102,7 @@
 
   /* ── 오늘의 갓성비 띠배너 ── */
   .strip{background:var(--cream);padding:14px 20px 15px}
+  .strip--in{margin:10px -20px 0}
   .strip__title{margin:0;font-size:15px;font-weight:700;letter-spacing:-.03em}
   .strip__sub{margin:3px 0 0;font-size:13px;color:var(--sub)}
   .strip__track{display:flex;gap:9px;overflow-x:auto;margin:10px -20px 0;padding:0 20px 1px;scroll-snap-type:x mandatory;scrollbar-width:none}
@@ -131,11 +138,8 @@
   .tab:focus-visible{outline:2px solid var(--green);outline-offset:-3px;border-radius:6px}
 
   /* ── 패널 공통 ── */
-  .panel{padding:4px 20px 30px}
-  .panel__head{padding:16px 0 2px}
-  .panel__title{margin:0;font-size:18px;font-weight:700;letter-spacing:-.03em}
-  .panel__title span{font-size:14px;font-weight:600;color:var(--green)}
-  .panel__sub{margin:4px 0 0;font-size:13.5px;color:var(--sub)}
+  .panel{padding:0 20px 30px}
+  .panel__lead{margin:0;padding:15px 0 0;font-size:14px;line-height:1.55;color:var(--sub)}
 
   /* ── 카테고리 필터 칩 ── */
   .chips{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0 0}
@@ -290,7 +294,7 @@
   .pick{display:inline-flex;align-items:center;gap:4px;padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;color:var(--ink);text-decoration:none}
   .pick span{color:var(--green)}
 
-  .sheet__disc{margin:26px 0 0;padding-top:18px;border-top:1px solid var(--line2);font-size:13px;line-height:1.6;color:var(--muted)}
+  .sheet__notice{margin:14px 0 0;font-size:12.5px;line-height:1.55;color:var(--muted)}
 
   @media (prefers-reduced-motion:reduce){
     *{animation-duration:.001ms !important;animation-delay:0ms !important;transition-duration:.001ms !important}
@@ -310,35 +314,7 @@
     <p class="lede">7세 워킹맘의 살림·식단 치트키</p>
   </header>
 
-  <!-- 공정위 고지 (첫 화면 노출) -->
-  <p class="notice"><span><span>쿠팡 파트너스 활동의 일환으로,</span> <span>이에 따른 일정액의 수수료를 제공받습니다.</span></span></p>
-
-  <!-- 오늘의 살림 갓성비 -->
-  <section class="sec strip" aria-label="오늘의 살림 갓성비">
-    <h2 class="strip__title">오늘의 살림 갓성비</h2>
-    <p class="strip__sub">레시피 보다가 같이 담는 두 개</p>
-
-    <div class="strip__track">
-      <a class="mini" href="https://link.coupang.com/a/iFujx12Fky" target="_blank" rel="nofollow sponsored noopener"
-         data-item="코코즈 오븐크리너 골드 500ml" data-cat="살림·리빙" data-price="6430">
-        <img class="mini__img" src="img/banner_cocoz.jpg" alt="코코즈 오븐크리너 골드 500ml" loading="lazy" decoding="async">
-        <span class="mini__body">
-          <span class="mini__name">코코즈 오븐크리너 골드 500ml</span>
-          <span class="mini__price"><b class="num">6,430원</b><span>와우 10% 할인</span></span>
-        </span>
-      </a>
-      <a class="mini" href="https://link.coupang.com/a/iF1ZtZ29xA" target="_blank" rel="nofollow sponsored noopener"
-         data-item="크리넥스 안심 3겹 키친타올 140매 4개" data-cat="살림·리빙" data-price="6360">
-        <img class="mini__img" src="img/banner_kleenex.jpg" alt="크리넥스 안심 3겹 키친타올 140매 4개" loading="lazy" decoding="async">
-        <span class="mini__body">
-          <span class="mini__name">크리넥스 안심 3겹 키친타올 140매×4개</span>
-          <span class="mini__price"><b class="num">6,360원</b><span>30% 할인 · 로켓배송</span></span>
-        </span>
-      </a>
-    </div>
-  </section>
-
-  <!-- 메인 탭 2개 -->
+  <!-- 메인 탭 2개 (타이틀 바로 아래) -->
   <div class="tabs" role="tablist" aria-label="메인 메뉴">
     <button class="tab" role="tab" data-tab="recipe" aria-selected="true" aria-controls="panel">10분 레시피</button>
     <button class="tab" role="tab" data-tab="deals" aria-selected="false" aria-controls="panel">추천템 모음</button>
@@ -853,10 +829,8 @@ function recipePanelHTML(){
   const t = MAIN.recipe;
   const list = recipesFor(picked);
   return '' +
-    '<div class="panel__head">' +
-      '<h2 class="panel__title">' + esc(t.label) + '</h2>' +
-      '<p class="panel__sub">' + esc(t.sub) + '</p>' +
-    '</div>' +
+    '<h2 class="sr-only">' + esc(t.label) + '</h2>' +
+    '<p class="panel__lead">' + esc(t.sub) + '</p>' +
     '<div class="ing-filter">' +
       '<p class="ing-filter__label">냉장고에 있는 재료</p>' +
       '<div class="chips" id="ingChips" role="group" aria-label="냉장고 재료 필터">' + ingChipsHTML() + '</div>' +
@@ -866,6 +840,7 @@ function recipePanelHTML(){
     '<section class="cheat-sec">' +
       '<h3 class="cheat-sec__title">냉장고에 없는 것만 담으세요</h3>' +
       '<p class="cheat-sec__sub">레시피 8편에 쓰는 재료·주방템 17가지. 전부 로켓배송 링크입니다.</p>' +
+      noticeHTML('notice--in') +
       cheatGridHTML() +
       '<p class="cheat-note">레시피를 열면 재료를 하나씩 체크할 수 있어요. 체크한 건 이 폰에만 저장됩니다.</p>' +
     '</section>' +
@@ -875,6 +850,40 @@ function recipePanelHTML(){
     '</div>';
 }
 
+/* ── 공정위 고지 ── */
+function noticeHTML(mod){
+  return '<p class="notice' + (mod ? ' ' + mod : '') + '">' +
+    '<span><span>쿠팡 파트너스 활동의 일환으로,</span> <span>이에 따른 일정액의 수수료를 제공받습니다.</span></span>' +
+  '</p>';
+}
+
+/* ── 오늘의 살림 갓성비 (추천템 탭 상단) ── */
+function stripHTML(){
+  return '' +
+    '<section class="strip strip--in" aria-label="오늘의 살림 갓성비">' +
+      '<h2 class="strip__title">오늘의 살림 갓성비</h2>' +
+      '<p class="strip__sub">레시피 보다가 같이 담는 두 개</p>' +
+      '<div class="strip__track">' +
+        '<a class="mini" href="https://link.coupang.com/a/iFujx12Fky" target="_blank" rel="nofollow sponsored noopener" ' +
+          'data-item="코코즈 오븐크리너 골드 500ml" data-cat="살림·리빙" data-price="6430">' +
+          '<img class="mini__img" src="img/banner_cocoz.jpg" alt="코코즈 오븐크리너 골드 500ml" loading="lazy" decoding="async">' +
+          '<span class="mini__body">' +
+            '<span class="mini__name">코코즈 오븐크리너 골드 500ml</span>' +
+            '<span class="mini__price"><b class="num">6,430원</b><span>와우 10% 할인</span></span>' +
+          '</span>' +
+        '</a>' +
+        '<a class="mini" href="https://link.coupang.com/a/iF1ZtZ29xA" target="_blank" rel="nofollow sponsored noopener" ' +
+          'data-item="크리넥스 안심 3겹 키친타올 140매 4개" data-cat="살림·리빙" data-price="6360">' +
+          '<img class="mini__img" src="img/banner_kleenex.jpg" alt="크리넥스 안심 3겹 키친타올 140매 4개" loading="lazy" decoding="async">' +
+          '<span class="mini__body">' +
+            '<span class="mini__name">크리넥스 안심 3겹 키친타올 140매×4개</span>' +
+            '<span class="mini__price"><b class="num">6,360원</b><span>30% 할인 · 로켓배송</span></span>' +
+          '</span>' +
+        '</a>' +
+      '</div>' +
+    '</section>';
+}
+
 function dealsPanelHTML(){
   const t = MAIN.deals;
   const chips = Object.keys(CATS).map(function (k){
@@ -882,10 +891,10 @@ function dealsPanelHTML(){
       esc(CATS[k].label) + '</button>';
   }).join('');
   return '' +
-    '<div class="panel__head">' +
-      '<h2 class="panel__title">' + esc(t.label) + '</h2>' +
-      '<p class="panel__sub">' + esc(t.sub) + '</p>' +
-    '</div>' +
+    '<h2 class="sr-only">' + esc(t.label) + '</h2>' +
+    '<p class="panel__lead">' + esc(t.sub) + '</p>' +
+    noticeHTML('notice--lead') +
+    stripHTML() +
     '<div class="chips" role="group" aria-label="카테고리 필터">' + chips + '</div>' +
     '<div id="dealList">' + dealListHTML() + '</div>';
 }
@@ -1003,6 +1012,7 @@ function sheetHTML(r){
         '<li><span>난이도</span><b>' + esc(r.level) + '</b></li>' +
         '<li><span>분량</span><b>' + esc(r.serves) + '</b></li>' +
       '</ul>' +
+      '<p class="sheet__notice">재료·주방템 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>' +
       '<section class="block">' +
         '<div class="block__head">' +
           '<h3 class="block__title">냉장고 재료 체크</h3>' +
@@ -1029,7 +1039,6 @@ function sheetHTML(r){
         '<h3 class="block__title">이 레시피에 쓴 재료·주방템</h3>' +
         '<ul class="picks">' + picksHTML + '</ul>' +
       '</section>' +
-      '<p class="sheet__disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>' +
     '</div>';
 }
 
