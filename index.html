@@ -85,7 +85,7 @@
     content:"";flex:0 0 auto;width:5px;height:5px;margin-top:6.5px;border-radius:50%;
     background:var(--green);opacity:.5;
   }
-  .notice span{word-break:keep-all}
+  .notice > span{min-width:0;word-break:keep-all}
 
   /* ── 공통 섹션 ── */
   .sec{padding:26px 20px}
@@ -310,7 +310,7 @@
   </header>
 
   <!-- 공정위 고지 (첫 화면 노출) -->
-  <p class="notice"><span>쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</span></p>
+  <p class="notice"><span><span>쿠팡 파트너스 활동의 일환으로,</span> <span>이에 따른 일정액의 수수료를 제공받습니다.</span></span></p>
 
   <!-- 오늘의 살림 갓성비 -->
   <section class="sec strip" aria-label="오늘의 살림 갓성비">
