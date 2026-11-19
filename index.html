@@ -13,14 +13,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>데일리템빙</title>
-<meta name="description" content="7세 엄마의 육아템·선물·나들이 기록">
+<meta name="description" content="7세 엄마의 육아템·선물·나들이·집밥 기록">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="canonical" href="https://dailytemving.github.io/dailytemving/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="데일리템빙">
 <meta property="og:title" content="데일리템빙">
-<meta property="og:description" content="7세 엄마의 육아템·선물·나들이 기록">
+<meta property="og:description" content="7세 엄마의 육아템·선물·나들이·집밥 기록">
 <meta property="og:url" content="https://dailytemving.github.io/dailytemving/">
 <meta property="og:image" content="https://dailytemving.github.io/dailytemving/og-cover.jpg">
 <meta property="og:image:width" content="1200">
@@ -28,7 +28,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="데일리템빙">
-<meta name="twitter:description" content="7세 엄마의 육아템·선물·나들이 기록">
+<meta name="twitter:description" content="7세 엄마의 육아템·선물·나들이·집밥 기록">
 <meta name="twitter:image" content="https://dailytemving.github.io/dailytemving/og-cover.jpg">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -76,7 +76,7 @@
   .logo em{font-style:normal;color:var(--green)}
   .lede{margin:8px 0 0;font-size:14.5px;line-height:1.55;color:var(--sub)}
 
-  /* ── 메인 탭 (2개) ── */
+  /* ── 메인 탭 (3개) ── */
   .tabs{
     position:sticky;top:0;z-index:30;display:flex;
     background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
@@ -84,12 +84,12 @@
   }
   .tab{
     appearance:none;border:0;background:none;font:inherit;cursor:pointer;
-    flex:1 1 0;padding:15px 8px 13px;font-size:16px;line-height:1.2;font-weight:500;
+    flex:1 1 0;padding:15px 6px 13px;font-size:15px;line-height:1.2;font-weight:500;
     color:var(--muted);white-space:nowrap;position:relative;letter-spacing:-.02em;
   }
   .tab + .tab{border-left:1px solid var(--line2)}
   .tab[aria-selected="true"]{color:var(--ink);font-weight:700}
-  .tab[aria-selected="true"]::after{content:"";position:absolute;left:22px;right:22px;bottom:-1px;height:2px;background:var(--ink)}
+  .tab[aria-selected="true"]::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;background:var(--ink)}
   .tab:focus-visible{outline:2px solid var(--green);outline-offset:-3px;border-radius:6px}
 
   /* ── 패널 ── */
@@ -119,6 +119,8 @@
   }
   .notice > span{min-width:0;word-break:keep-all}
   .notice > span > span{white-space:nowrap}
+  /* 레시피 탭: 재료 링크 바로 위 고지 */
+  .notice--in{margin:12px 0 0;padding:0;border:0;background:none}
 
   /* ── 상품 리스트 ── */
   .deal-list__head{padding:19px 0 2px}
@@ -185,6 +187,121 @@
   .carry__price span{font-size:12.5px;color:var(--muted)}
   .carry__note{margin:11px 0 0;font-size:12px;line-height:1.5;color:var(--muted);word-break:keep-all}
 
+  /* ── 집밥 레시피: 냉장고 재료 필터 ── */
+  .ing-filter{margin:13px 0 0;padding:11px 13px 12px;border:1px solid var(--line);border-radius:12px;background:var(--cream)}
+  .ing-filter__label{margin:0;font-size:12.5px;font-weight:700;letter-spacing:-.02em;color:var(--green)}
+  .ing-filter .chips{margin:9px 0 0;gap:6px}
+  .ing-filter .chip{padding:7px 10px;font-size:13px}
+  .ing-filter__hint{margin:9px 0 0;font-size:12.5px;line-height:1.5;color:var(--sub);word-break:keep-all}
+  .ing-filter__hint b{color:var(--ink);font-weight:700}
+  .empty__reset{appearance:none;font:inherit;margin-top:14px;padding:10px 16px;border:1px solid var(--green);border-radius:999px;background:#fff;color:var(--green);font-size:14px;font-weight:600;cursor:pointer}
+
+  /* ── 집밥 레시피: 카드 ── */
+  .recipes{list-style:none;margin:13px 0 0;padding:0;display:grid;gap:24px}
+  .recipe{display:block;width:100%;text-align:left;padding:0;border:0;background:none;font:inherit;cursor:pointer;color:inherit}
+  .recipe__img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:var(--cream)}
+  .recipe__title{display:block;margin:14px 0 10px;font-size:17px;font-weight:700;letter-spacing:-.025em;line-height:1.42}
+  .recipe__dek{display:block;margin:0 0 12px;font-size:14px;line-height:1.6;color:var(--sub);word-break:keep-all}
+  .recipe__meta{display:block;margin:0;font-size:13px;color:var(--muted)}
+  .recipe:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:6px}
+
+  /* ── 집밥 레시피: 재료·주방템 링크 그리드 ── */
+  .cheat-sec{margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+  .cheat-sec__title{margin:0;font-size:17px;font-weight:700;letter-spacing:-.03em}
+  .cheat-sec__sub{margin:5px 0 0;font-size:13.5px;line-height:1.55;color:var(--sub);word-break:keep-all}
+  .cheat-grid{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0 0;padding:0}
+  .cheat{
+    display:flex;align-items:center;justify-content:space-between;gap:8px;
+    padding:12px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;
+    font-size:14px;line-height:1.3;font-weight:500;letter-spacing:-.02em;color:var(--ink);text-decoration:none;
+  }
+  .cheat span{flex:0 0 auto;color:var(--green);font-size:12px}
+  .cheat:active{background:var(--cream)}
+  .cheat-grid li:last-child:nth-child(odd){grid-column:1 / -1}
+  .cheat-note{margin:10px 0 0;font-size:12.5px;line-height:1.5;color:var(--muted);word-break:keep-all}
+
+  .tip{margin:26px 0 0;padding:16px 18px;border-radius:12px;background:var(--cream);border:1px solid var(--line2)}
+  .tip__title{margin:0;font-size:15px;font-weight:700}
+  .tip__body{margin:6px 0 0;font-size:14px;line-height:1.6;color:var(--sub);word-break:keep-all}
+
+  /* ── 레시피 상세 시트 ── */
+  .sheet{position:fixed;inset:0;z-index:60}
+  .sheet[aria-hidden="true"]{pointer-events:none}
+  .sheet__scrim{position:absolute;inset:0;background:rgba(20,20,20,.38);opacity:0;transition:opacity .26s ease}
+  .sheet[aria-hidden="false"] .sheet__scrim{opacity:1}
+  .sheet[aria-hidden="true"] .sheet__scrim{visibility:hidden;transition:opacity .26s ease,visibility 0s .26s}
+  .sheet__panel{
+    position:absolute;left:50%;bottom:0;transform:translateX(-50%) translateY(100%);
+    width:100%;max-width:600px;max-height:92vh;max-height:92dvh;
+    background:#fff;border-radius:16px 16px 0 0;
+    display:flex;flex-direction:column;
+    transition:transform .3s cubic-bezier(.22,.8,.3,1);
+  }
+  .sheet[aria-hidden="false"] .sheet__panel{transform:translateX(-50%) translateY(0)}
+  .sheet[aria-hidden="true"] .sheet__panel{visibility:hidden;transition:transform .3s cubic-bezier(.22,.8,.3,1),visibility 0s .3s}
+  .sheet__scroll{overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:36px}
+  .sheet__bar{
+    position:sticky;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;
+    padding:12px 20px;background:rgba(255,255,255,.97);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  }
+  .sheet__bar span{font-size:14px;color:var(--muted)}
+  .sheet__close{appearance:none;border:0;background:none;font:inherit;cursor:pointer;padding:4px 2px;font-size:15px;color:var(--ink);font-weight:600}
+  .sheet__close:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
+
+  .sheet__cover{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--cream)}
+  .sheet__body{padding:22px 20px 0}
+  .sheet__kicker{margin:0;font-size:14px;color:var(--muted)}
+  .sheet__title{margin:12px 0 0;font-size:23px;font-weight:800;line-height:1.35;letter-spacing:-.035em}
+  .sheet__dek{margin:12px 0 0;font-size:15px;line-height:1.65;color:var(--sub);word-break:keep-all}
+
+  .facts{list-style:none;display:flex;margin:22px 0 0;padding:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .facts li{flex:1;padding:12px 0 11px;text-align:center;border-left:1px solid var(--line2)}
+  .facts li:first-child{border-left:0}
+  .facts span{display:block;font-size:13px;color:var(--muted)}
+  .facts b{display:block;margin-top:3px;font-size:15px;font-weight:600}
+
+  .block{margin-top:26px}
+  .block__head{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .block__title{margin:0;font-size:16px;font-weight:700;letter-spacing:-.02em}
+  .block__count{margin:0;font-size:14px;color:var(--sub)}
+  .block__count b{color:var(--green);font-weight:700}
+
+  .ing-list{list-style:none;margin:10px 0 0;padding:0}
+  .ing{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line2);padding:1px 0}
+  .ing:first-child{border-top:1px solid var(--line2)}
+  .ing__label{position:relative;flex:1;min-width:0;display:flex;align-items:flex-start;gap:12px;padding:13px 0;cursor:pointer}
+  .ing__label input{position:absolute;width:1px;height:1px;opacity:0;margin:0}
+  .ing__box{flex:0 0 auto;width:18px;height:18px;margin-top:2px;border:1.5px solid #CFC9BE;border-radius:4px;background:#fff;position:relative;transition:background .15s ease,border-color .15s ease}
+  .ing__label input:checked ~ .ing__box{background:var(--green);border-color:var(--green)}
+  .ing__label input:checked ~ .ing__box::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;border:2px solid #fff;border-top:0;border-left:0;transform:rotate(40deg)}
+  .ing__name{font-size:15px;line-height:1.5;color:var(--ink);transition:color .15s ease;word-break:keep-all}
+  .ing__label input:checked ~ .ing__name{color:#B4AEA3;text-decoration:line-through}
+  .ing__label input:focus-visible ~ .ing__box{outline:2px solid var(--green);outline-offset:3px}
+  .ing__buy{flex:0 0 auto;font-size:13px;color:var(--green);text-decoration:none;padding:4px 0;border-bottom:1px solid rgba(30,70,49,.3);white-space:nowrap}
+
+  .steps{list-style:none;margin:10px 0 0;padding:0}
+  .steps li{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line2)}
+  .steps li:last-child{border-bottom:0;padding-bottom:2px}
+  .steps__n{flex:0 0 auto;min-width:20px;padding-top:1px;font-size:14px;font-weight:700;color:var(--green)}
+  .steps p{margin:0;font-size:15px;line-height:1.7;color:var(--ink);word-break:keep-all}
+
+  .note{margin:24px 0 0;padding:16px 18px;border-radius:12px;background:var(--cream);border:1px solid var(--line2)}
+  .note__label{margin:0;font-size:13px;font-weight:700;color:var(--green)}
+  .note p{margin:6px 0 0;font-size:14px;line-height:1.7;color:var(--sub);word-break:keep-all}
+
+  .saver{margin-top:22px;padding:16px 18px;border:1px solid var(--line);border-radius:12px}
+  .saver__label{display:block;font-size:13px;color:var(--muted)}
+  .saver__name{display:block;margin:5px 0 0;font-size:15px;font-weight:700}
+  .saver__desc{display:block;margin:4px 0 0;font-size:14px;line-height:1.6;color:var(--sub);word-break:keep-all}
+  .saver__link{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;color:var(--green);text-decoration:none;border-bottom:1px solid rgba(30,70,49,.35)}
+
+  .picks{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0}
+  .pick{display:inline-flex;align-items:center;gap:4px;padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;color:var(--ink);text-decoration:none}
+  .pick span{color:var(--green)}
+
+  .sheet__notice{margin:14px 0 0;font-size:12.5px;line-height:1.55;color:var(--muted)}
+
   /* ── 푸터 ── */
   .foot{padding:26px 20px 30px;border-top:1px solid var(--line);background:#fff}
   .foot__brand{margin:0;font-size:15px;font-weight:700;letter-spacing:-.03em}
@@ -202,26 +319,41 @@
 
   <header class="head">
     <div class="head__meta">
-      <span class="num">2026. 11. 16</span>
-      <span>육아·선물 <b class="num" id="totalCount">15</b></span>
+      <span class="num">2026. 11. 20</span>
+      <span>레시피 <b class="num" id="recipeHeadCount">8</b> · 육아·선물 <b class="num" id="totalCount">15</b></span>
     </div>
     <h1 class="logo">데일리<em>템빙</em></h1>
-    <p class="lede">7세 엄마의 육아템·선물·나들이 기록</p>
+    <p class="lede">7세 엄마의 육아템·선물·나들이·집밥 기록</p>
   </header>
 
-  <!-- 메인 탭 2개 (타이틀 바로 아래) -->
+  <!-- 메인 탭 3개 (타이틀 바로 아래) -->
   <div class="tabs" role="tablist" aria-label="메인 메뉴">
     <button class="tab" role="tab" data-tab="gifts" aria-selected="true" aria-controls="panel">육아템·선물</button>
     <button class="tab" role="tab" data-tab="places" aria-selected="false" aria-controls="panel">아이랑 갈 곳<span class="tab__n num" id="placeCount"></span></button>
+    <button class="tab" role="tab" data-tab="recipe" aria-selected="false" aria-controls="panel">집밥 레시피<span class="tab__n num" id="recipeCount"></span></button>
   </div>
 
   <main class="panel" id="panel" role="tabpanel" aria-live="polite"></main>
 
   <footer class="foot">
     <p class="foot__brand">데일리템빙</p>
-    <p class="foot__line">7세 엄마가 직접 써본 육아·선물템과 아이랑 다녀온 곳 기록.<br>가격·재고는 매주 월·목 다시 확인하며, 판매처 사정에 따라 달라질 수 있어요.</p>
-    <p class="foot__disc">상품 링크는 모두 쿠팡 파트너스 링크입니다.<br>쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    <p class="foot__line">7세 엄마가 직접 써본 육아·선물템, 아이랑 다녀온 곳, 집에서 해먹은 집밥 기록.<br>가격·재고는 매주 월·목 다시 확인하며, 판매처 사정에 따라 달라질 수 있어요.</p>
+    <p class="foot__disc">상품·레시피 재료 링크는 모두 쿠팡 파트너스 링크입니다.<br>쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
   </footer>
+</div>
+
+<!-- 상세 시트 (집밥 레시피) -->
+<div class="sheet" id="sheet" aria-hidden="true">
+  <div class="sheet__scrim" data-close></div>
+  <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet__scroll" id="sheetScroll">
+      <div class="sheet__bar">
+        <span id="sheetBarLabel">레시피</span>
+        <button class="sheet__close" data-close>닫기</button>
+      </div>
+      <div id="sheetBody"></div>
+    </div>
+  </div>
 </div>
 
 <!-- 아이랑 갈 곳: 맨 아래 '갈 때 챙길 템' 구조 (쿠팡 링크 연결부) -->
@@ -237,11 +369,10 @@
 <noscript>
   <p style="padding:18px 20px;font-size:14px;color:#5E5A53">탭 이동과 금액대 필터는 자바스크립트로 동작합니다.</p>
 </noscript>
-
 <script>
 /* =====================================================================
-   데일리템빙 v4 — 육아템·선물(금액대 필터 5개) · 아이랑 갈 곳
-   GA4: tab_view(메인 탭 + 금액대 필터) / coupang_click
+   데일리템빙 v5 — 육아템·선물(금액대 필터 5개) · 아이랑 갈 곳 · 집밥 레시피 3탭
+   GA4: tab_view(메인 탭 + 금액대 필터 + 레시피 재료 필터) / coupang_click
    쿠파스 링크: 파트너스 '간편 링크' 채널 dailytemving
    ===================================================================== */
 
@@ -405,7 +536,7 @@ const PRODUCTS = {
   ]
 };
 
-/* ── 보관: 레시피 8편 · 레시피 재료 링크 (화면엔 안 나옴, 탭 재개 시 사용) ── */
+/* ── 레시피 8편 · 레시피 재료 링크 (3번째 탭 '집밥 레시피') ── */
 const RECIPES = [
   {
     id:'cabbage', no:'01',
@@ -634,10 +765,11 @@ const CHEAT = {
   '화이트 스튜 루':        'https://link.coupang.com/a/iF1cCCq7Eq'
 };
 
-/* ── 메인 탭 2개 ── */
+/* ── 메인 탭 3개 ── */
 const TABS = {
   gifts:  { label:'육아템·선물' },
-  places: { label:'아이랑 갈 곳' }
+  places: { label:'아이랑 갈 곳' },
+  recipe: { label:'집밥 레시피' }
 };
 
 /* ── 금액대·상황 필터 5개 ── */
@@ -730,8 +862,8 @@ function dealHeadHTML(f, items){
 }
 
 /* ── 공정위 고지 ── */
-function noticeHTML(){
-  return '<p class="notice">' +
+function noticeHTML(mod){
+  return '<p class="notice' + (mod ? ' ' + mod : '') + '">' +
     '<span><span>쿠팡 파트너스 활동의 일환으로,</span> <span>이에 따른 일정액의 수수료를 제공받습니다.</span></span>' +
   '</p>';
 }
@@ -850,12 +982,93 @@ function placesPanelHTML(){
     '<div class="places">' + PLACES.map(placeHTML).join('') + '</div>';
 }
 
-/* ───────────────────── 렌더 ───────────────────── */
-function renderPanel(){
-  $('#panel').innerHTML = (currentTab === 'gifts') ? giftsPanelHTML() : placesPanelHTML();
+/* ───────────────────── 탭 3: 집밥 레시피 ───────────────────── */
+/* 냉장고 재료 필터 — 고른 재료가 모두 들어간 레시피만 남깁니다 */
+const INGREDIENTS = ['계란','양배추','참치','순두부','설렁탕 육수','닭고기','현미밥','버터','간장','두유면'];
+let picked = [];
+
+function recipesFor(list){
+  if (!list.length) return RECIPES;
+  return RECIPES.filter(function (r){
+    return list.every(function (t){ return r.tags.indexOf(t) >= 0; });
+  });
 }
 
-/* ───────────────────── 메인 탭 2개 ───────────────────── */
+function ingChipsHTML(){
+  return '<button class="chip" type="button" data-ing-chip="__all" aria-pressed="' + (!picked.length) + '">전체</button>' +
+    INGREDIENTS.map(function (t){
+      return '<button class="chip" type="button" data-ing-chip="' + esc(t) + '" aria-pressed="' + (picked.indexOf(t) >= 0) + '">' + esc(t) + '</button>';
+    }).join('');
+}
+
+function ingHintHTML(list){
+  if (!picked.length) return '재료를 누르면 그 재료가 들어간 레시피만 남습니다. 여러 개를 누르면 <b>모두</b> 들어간 레시피예요.';
+  if (!list.length) return '고른 재료 <b>' + esc(picked.join(' · ')) + '</b> 조합은 지금 레시피가 없어요.';
+  return '고른 재료 <b>' + esc(picked.join(' · ')) + '</b> 기준, 레시피 <b class="num">' + list.length + '편</b>';
+}
+
+function recipeListHTML(list){
+  const items = list || RECIPES;
+  if (!items.length){
+    return '<div class="empty">' +
+      '<p class="empty__title">그 조합으로 되는 레시피가 없어요</p>' +
+      '<p class="empty__body">재료를 하나만 빼보세요. 계란 · 양배추 · 참치 · 순두부 · 닭고기 중 하나만 골라도 바로 나옵니다.</p>' +
+      '<button class="empty__reset" type="button" data-reset>전체 레시피 보기</button>' +
+    '</div>';
+  }
+  return '<ul class="recipes">' + items.map(function (r){
+    return '<li>' +
+      '<button class="recipe" type="button" data-open="' + r.id + '" aria-haspopup="dialog">' +
+        '<img class="recipe__img" src="' + esc(r.img) + '" alt="' + esc(r.title) + '" loading="lazy" decoding="async">' +
+        '<span class="recipe__title">' + esc(r.title) + '</span>' +
+        '<span class="recipe__dek">' + esc(r.dek) + '</span>' +
+        '<span class="recipe__meta num">' + r.time + '분 · ' + esc(r.serves) + ' · 재료 ' + r.ing.length + '</span>' +
+      '</button>' +
+    '</li>';
+  }).join('') + '</ul>';
+}
+
+function cheatGridHTML(){
+  return '<ul class="cheat-grid">' + Object.keys(CHEAT).map(function (k){
+    return '<li>' +
+      '<a class="cheat" href="' + esc(CHEAT[k]) + '" target="_blank" rel="nofollow sponsored noopener" ' +
+        'data-item="' + esc(k) + '" data-cat="레시피 재료">' + esc(k) + ' <span aria-hidden="true">↗</span></a>' +
+    '</li>';
+  }).join('') + '</ul>';
+}
+
+function recipePanelHTML(){
+  const list = recipesFor(picked);
+  return '' +
+    '<h2 class="sr-only">' + esc(TABS.recipe.label) + '</h2>' +
+    '<p class="panel__lead">냉장고에 있는 재료로 오늘 저녁 정하기. ' + RECIPES.length + '편 모두 15분 안에 끝납니다.</p>' +
+    '<div class="ing-filter">' +
+      '<p class="ing-filter__label">냉장고에 있는 재료</p>' +
+      '<div class="chips" id="ingChips" role="group" aria-label="냉장고 재료 필터">' + ingChipsHTML() + '</div>' +
+      '<p class="ing-filter__hint" id="ingHint">' + ingHintHTML(list) + '</p>' +
+    '</div>' +
+    '<div id="recipeList">' + recipeListHTML(list) + '</div>' +
+    '<section class="cheat-sec">' +
+      '<h3 class="cheat-sec__title">냉장고에 없는 것만 담으세요</h3>' +
+      '<p class="cheat-sec__sub">레시피 ' + RECIPES.length + '편에 쓰는 재료·주방템 ' + Object.keys(CHEAT).length + '가지. 전부 로켓배송 링크입니다.</p>' +
+      noticeHTML('notice--in') +
+      cheatGridHTML() +
+      '<p class="cheat-note">레시피를 열면 재료를 하나씩 체크할 수 있어요. 체크한 건 이 폰에만 저장됩니다.</p>' +
+    '</section>' +
+    '<div class="tip">' +
+      '<p class="tip__title">10분이 안 되는 날엔</p>' +
+      '<p class="tip__body">아이 덮밥은 3분, 간장국수는 1분, 어른 덮밥과 주먹밥은 5분입니다. 퇴근길에 그 셋만 떠올려도 저녁은 됩니다.</p>' +
+    '</div>';
+}
+
+/* ───────────────────── 렌더 ───────────────────── */
+function renderPanel(){
+  if (currentTab === 'gifts'){ $('#panel').innerHTML = giftsPanelHTML(); }
+  else if (currentTab === 'places'){ $('#panel').innerHTML = placesPanelHTML(); }
+  else { $('#panel').innerHTML = recipePanelHTML(); }
+}
+
+/* ───────────────────── 메인 탭 3개 ───────────────────── */
 $$('.tab').forEach(function (btn){
   btn.addEventListener('click', function (){
     const key = btn.dataset.tab;
@@ -891,9 +1104,185 @@ document.addEventListener('click', function (e){
   trackTab(filterOf(key).label, 'gifts_' + key, 'filter');
 }, false);
 
+/* ───────────────────── 집밥 레시피: 냉장고 재료 필터 ───────────────────── */
+function trackRecipeFilter(){
+  if (typeof gtag !== 'function') return;
+  gtag('event', 'recipe_filter', {
+    ingredients: picked.length ? picked.join(',') : 'all',
+    picked_count: picked.length,
+    recipe_count: recipesFor(picked).length
+  });
+}
+
+function refreshRecipeFilter(){
+  const list = recipesFor(picked);
+  const box = $('#recipeList');
+  if (box) box.innerHTML = recipeListHTML(list);
+  $$('[data-ing-chip]').forEach(function (b){
+    const on = b.dataset.ingChip === '__all' ? !picked.length : picked.indexOf(b.dataset.ingChip) >= 0;
+    b.setAttribute('aria-pressed', String(on));
+  });
+  const hint = $('#ingHint');
+  if (hint) hint.innerHTML = ingHintHTML(list);
+}
+
+document.addEventListener('click', function (e){
+  if (e.target.closest('[data-reset]')){
+    picked = [];
+    refreshRecipeFilter();
+    trackRecipeFilter();
+    return;
+  }
+  const btn = e.target.closest('[data-ing-chip]');
+  if (!btn) return;
+  const key = btn.dataset.ingChip;
+  if (key === '__all'){
+    picked = [];
+  } else if (picked.indexOf(key) >= 0){
+    picked = picked.filter(function (x){ return x !== key; });
+  } else {
+    picked = picked.concat(key);
+  }
+  refreshRecipeFilter();
+  trackRecipeFilter();
+}, false);
+
+/* ───────────────────── 집밥 레시피: 상세 시트 ───────────────────── */
+const sheet = $('#sheet');
+const sheetBody = $('#sheetBody');
+let lastFocus = null;
+
+function buyUrl(q){
+  return CHEAT[q] || ('https://www.coupang.com/np/search?q=' + encodeURIComponent(q));
+}
+
+function sheetHTML(r){
+  const ingHTML = r.ing.map(function (it, i){
+    return '<li class="ing">' +
+      '<label class="ing__label">' +
+        '<input type="checkbox" data-ingbox="' + r.id + ':' + i + '">' +
+        '<span class="ing__box" aria-hidden="true"></span>' +
+        '<span class="ing__name">' + esc(it.n) + '</span>' +
+      '</label>' +
+      (it.buy ? '<a class="ing__buy" href="' + esc(buyUrl(it.buy)) + '" target="_blank" rel="nofollow sponsored noopener" data-item="' + esc(it.buy) + '" data-cat="레시피 재료">로켓배송 →</a>' : '') +
+    '</li>';
+  }).join('');
+
+  const stepsHTML = r.steps.map(function (s, i){
+    return '<li><span class="steps__n num">' + String(i + 1) + '</span><p>' + esc(s) + '</p></li>';
+  }).join('');
+
+  const picksHTML = r.picks.map(function (p){
+    return '<li><a class="pick" href="' + esc(buyUrl(p.buy)) + '" target="_blank" rel="nofollow sponsored noopener" ' +
+      'data-item="' + esc(p.label) + '" data-cat="레시피 재료">' + esc(p.label) + ' <span aria-hidden="true">↗</span></a></li>';
+  }).join('');
+
+  return '' +
+    '<img class="sheet__cover" src="' + esc(r.img) + '" alt="' + esc(r.title) + '">' +
+    '<div class="sheet__body">' +
+      '<p class="sheet__kicker num">레시피 ' + r.no + '</p>' +
+      '<h2 class="sheet__title" id="sheetTitle">' + esc(r.title) + '</h2>' +
+      '<p class="sheet__dek">' + esc(r.dek) + '</p>' +
+      '<ul class="facts">' +
+        '<li><span>조리</span><b class="num">' + r.time + '분</b></li>' +
+        '<li><span>난이도</span><b>' + esc(r.level) + '</b></li>' +
+        '<li><span>분량</span><b>' + esc(r.serves) + '</b></li>' +
+      '</ul>' +
+      '<p class="sheet__notice">재료·주방템 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>' +
+      '<section class="block">' +
+        '<div class="block__head">' +
+          '<h3 class="block__title">냉장고 재료 체크</h3>' +
+          '<p class="block__count"><b id="ingDone" class="num">0</b> / ' + r.ing.length + '</p>' +
+        '</div>' +
+        '<ul class="ing-list">' + ingHTML + '</ul>' +
+      '</section>' +
+      '<section class="block">' +
+        '<h3 class="block__title">만드는 순서</h3>' +
+        '<ol class="steps">' + stepsHTML + '</ol>' +
+      '</section>' +
+      '<figure class="note">' +
+        '<figcaption class="note__label">한 줄 메모</figcaption>' +
+        '<p>' + esc(r.note) + '</p>' +
+      '</figure>' +
+      '<div class="saver">' +
+        '<span class="saver__label">시간을 아껴준 것</span>' +
+        '<span class="saver__name">' + esc(r.saver.name) + '</span>' +
+        '<span class="saver__desc">' + esc(r.saver.desc) + '</span>' +
+        '<a class="saver__link" href="' + esc(buyUrl(r.saver.buy)) + '" target="_blank" rel="nofollow sponsored noopener" ' +
+          'data-item="' + esc(r.saver.name) + '" data-cat="레시피 주방템">보러 가기 ↗</a>' +
+      '</div>' +
+      '<section class="block">' +
+        '<h3 class="block__title">이 레시피에 쓴 재료·주방템</h3>' +
+        '<ul class="picks">' + picksHTML + '</ul>' +
+      '</section>' +
+    '</div>';
+}
+
+/* 재료 체크는 이 폰에만 저장 */
+const STORE_KEY = 'dtb-recipe-check-v3';
+function readStore(){
+  try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}') || {}; } catch (e){ return {}; }
+}
+function writeStore(v){
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(v)); } catch (e){ /* 사생활 보호 모드 */ }
+}
+
+function updateIngDone(){
+  const boxes = $$('input[data-ingbox]', sheetBody);
+  const done = boxes.filter(function (b){ return b.checked; }).length;
+  const el = $('#ingDone');
+  if (el) el.textContent = done;
+}
+
+function openSheet(id){
+  const r = RECIPES.find(function (x){ return x.id === id; });
+  if (!r) return;
+
+  lastFocus = document.activeElement;
+  sheetBody.innerHTML = sheetHTML(r);
+  $('#sheetBarLabel').textContent = '레시피 ' + r.no;
+
+  const store = readStore();
+  $$('input[data-ingbox]', sheetBody).forEach(function (box){
+    if (store[box.dataset.ingbox]) box.checked = true;
+    box.addEventListener('change', function (){
+      const s = readStore();
+      if (box.checked) s[box.dataset.ingbox] = 1; else delete s[box.dataset.ingbox];
+      writeStore(s);
+      updateIngDone();
+    });
+  });
+  updateIngDone();
+
+  sheet.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  $('#sheetScroll').scrollTop = 0;
+  const closeBtn = $('.sheet__close', sheet);
+  if (closeBtn) closeBtn.focus({ preventScroll: true });
+  trackTab(TABS.recipe.label, 'recipe_' + r.id, 'detail');
+}
+
+function closeSheet(){
+  sheet.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+}
+
+document.addEventListener('click', function (e){
+  const opener = e.target.closest('[data-open]');
+  if (opener){ openSheet(opener.dataset.open); return; }
+  if (e.target.closest('[data-close]')){ closeSheet(); }
+});
+
+document.addEventListener('keydown', function (e){
+  if (e.key === 'Escape' && sheet.getAttribute('aria-hidden') === 'false') closeSheet();
+});
+
 /* 헤더 카운터는 실제 데이터 수로 맞춥니다 */
 $('#totalCount').textContent = PRODUCTS.kids.length;
 $('#placeCount').textContent = PLACES.length;
+$('#recipeCount').textContent = RECIPES.length;
+$('#recipeHeadCount').textContent = RECIPES.length;
 
 /* 첫 화면: 육아템·선물 */
 renderPanel();
