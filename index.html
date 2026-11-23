@@ -7,7 +7,8 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-4EMCZ8EM3J');
+  /* 링크 이동으로 페이지가 먼저 사라져도 히트가 유실되지 않도록 beacon 전송 지정 */
+  gtag('config', 'G-4EMCZ8EM3J', { transport_type: 'beacon' });
 </script>
 
 <meta charset="utf-8">
@@ -869,28 +870,54 @@ const FILTERS = [
 ];
 
 /* ───────────────────── GA4 이벤트 ───────────────────── */
-function trackTab(name, key, level){
-  if (typeof gtag === 'function'){
-    gtag('event', 'tab_view', { tab_name: name, tab_key: key, tab_level: level || 'main' });
-  }
+/* gtag 로더가 늦게 붙거나 없더라도 같은 형식으로 dataLayer에 넣어 히트를 잃지 않습니다 */
+function gtagEvent(name, params){
+  window.dataLayer = window.dataLayer || [];
+  if (typeof window.gtag === 'function') window.gtag('event', name, params);
+  else window.dataLayer.push(['event', name, params]);
 }
 
+function trackTab(name, key, level){
+  gtagEvent('tab_view', { tab_name: name, tab_key: key, tab_level: level || 'main' });
+}
+
+/* 쿠팡 파트너스 링크인지 확인 (link.coupang.com 단축 링크만 = 실제 수수료 링크) */
+function isAffiliateCoupang(href){
+  try {
+    return new URL(href, location.href).hostname === 'link.coupang.com';
+  } catch (err){ return false; }
+}
+
+/* 상품 클릭. item_name은 GA4 맞춤 측정기준과, items는 GA4 상품 리포트와 맞물립니다. */
 function trackCoupang(a){
-  if (typeof gtag !== 'function') return;
+  if (!a || !a.href) return;
+  const name  = a.dataset.item || '';
+  const cat   = a.dataset.cat || '';
+  const price = a.dataset.price ? Number(a.dataset.price) : 0;
+  const item  = { item_name: name, item_category: cat, quantity: 1 };
+  if (price) { item.price = price; item.currency = 'KRW'; }
   const params = {
-    item_name: a.dataset.item || '',
-    category: a.dataset.cat || '',
+    item_name: name,
+    category: cat,
     link_url: a.href,
+    items: [item],
     transport_type: 'beacon'
   };
-  if (a.dataset.price) params.price = Number(a.dataset.price);
-  gtag('event', 'coupang_click', params);
+  if (price) { params.price = price; params.currency = 'KRW'; }
+  gtagEvent('coupang_click', params);
 }
 
-document.addEventListener('click', function (e){
-  const a = e.target.closest('a[href*="link.coupang.com"]');
-  if (a) trackCoupang(a);
-}, false);
+/* 캡처 단계에서 잡아 다른 클릭 처리·새 탭 이동보다 먼저 히트를 내보냅니다.
+   preventDefault를 쓰지 않으므로 링크 이동 속도나 방식은 그대로입니다. */
+function onCoupangClick(e){
+  const t = e.target;
+  if (!t || !t.closest) return;
+  const a = t.closest('a[href]');
+  if (a && isAffiliateCoupang(a.href)) trackCoupang(a);
+}
+
+document.addEventListener('click', onCoupangClick, true);
+document.addEventListener('auxclick', onCoupangClick, true);
 
 /* ───────────────────── 유틸 ───────────────────── */
 const $  = (s, r) => (r || document).querySelector(s);
@@ -1193,8 +1220,7 @@ document.addEventListener('click', function (e){
 
 /* ───────────────────── 집밥 레시피: 냉장고 재료 필터 ───────────────────── */
 function trackRecipeFilter(){
-  if (typeof gtag !== 'function') return;
-  gtag('event', 'recipe_filter', {
+  gtagEvent('recipe_filter', {
     ingredients: picked.length ? picked.join(',') : 'all',
     picked_count: picked.length,
     recipe_count: recipesFor(picked).length
